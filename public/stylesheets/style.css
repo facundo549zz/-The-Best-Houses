@@ -1,40 +1,105 @@
 body{
     background-color: #ebecf1;
-}
-header{
+  }
+  header{
     background-color: #162447;
     padding: 10px 0px;
-    height: 120px;
-}
-header .logo{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  header .logo{
     width: 60px;
     height: 60px;
     border-radius: 15px;
-}
-header form input, button{
+  }
+  header ul li a{
+    color: white;
+    text-decoration: none;
+  }
+  header form input{
     background-color: white;
     border: 1px solid grey;
     height: 25px;
     padding: 0px 5px;
     border-radius: 10px;
-}
-header nav{
+    width: 100px;
+  }
+  header form button{
+    background-color: white;
+    border: 1px solid grey;
+    height: 25px;
+    padding: 0px 5px;
+    border-radius: 10px;
+    width:30px;
+  }
+
+  /*  FOOTER  */
+  
+footer{
     width: 100%;
+    font-family: Raleway;
+    margin-top: 20px;
+  }
+  .footer-container{
+    width: 100%;
+    background: #162447;
+    color: #ebecf1;
+  }
+  .footer-main{
+    width: 98%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-}
-header nav button.burger{
-    background-color: white;
-    color: #162447;
-    border-bottom: 20px;
-}
-header ul li a{
-    color: white;
+  }
+  .footer-columna .logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+  }
+  .footer-main .footer-columna{
+    width: calc(100% / 3);
+    text-align: justify;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .footer-main .footer-columna:nth-child(2){
+    padding: 0px 20px;
+  }
+  .footer-main .footer-columna p{
+    margin-left: 5px;
+    margin-bottom: 15px;
+    font-family: Raleway;
+  }
+  .footer-main .footer-columna span{
+    margin-left: 20px;
+  }
+  .footer-main .footer-columna .ul-navegacion li a{
     text-decoration: none;
-}
+  }
+  .footer-copy-redes{
+    justify-content: flex-end;
+  }
+  @media (min-width: 426px){
+    .footer-main{
+      flex-wrap: nowrap;
+    }
+  }
+  
 
-/* Formulario de Registro */
+  /* Carrusel */
+
+  .carousel{
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+
+  /* Formulario de Registro */
 
 *{
     margin: 0;
