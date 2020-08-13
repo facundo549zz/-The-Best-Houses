@@ -5,7 +5,11 @@
  */
 
 var app = require('../app');
+<<<<<<< HEAD
 var debug = require('debug')('the-best-bikes:server');
+=======
+var debug = require('debug')('mercadoliebre:server');
+>>>>>>> 03875088829e2f166a0da8791e8705c1cb7ce48e
 var http = require('http');
 
 /**
