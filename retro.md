@@ -9,3 +9,4 @@ revisar el trabajo de cada uno para ver que podria modificarse para que se vea m
 desviarnos de tema, posponer las tareas y reuniones para ultimo momento
 5.Dejar de hacer
 dejar de esperar a los compañeros para hacer las tareas
+https://app.mural.co/t/thebestbikes8857/m/thebestbikes8857/1596199406133/caa82cc44174517f0840751c4359e1f6b1fcbe54
