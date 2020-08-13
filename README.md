@@ -34,6 +34,9 @@ Integrantes:
          La siguiente pagina, si bien no pertence pertenece propia y específicament a bicicletas, hemos decidido tenerla como referencia al momento de diseñar todo lo
          relacionado a la compra de productos, ya que es una de las marcas lideres en venta de tangibles https://www.fravega.com/ 
 
+<<<<<<< HEAD
          https://trello.com/c/uJP9q6p7/14-tablero-de-trabajo-easy
 
+=======
+>>>>>>> 474504976dc4e86a26c9b9d60fff4fc56619aad6
 
