@@ -6,3 +6,5 @@ let registroController ={
         res.render('registro')
     },
 }
+
+module.exports = registroController
