@@ -1,0 +1,30 @@
+.caja{
+    border: solid 1px;
+}
+.caja img{
+    width: 250px;
+    position: relative;
+    right: 780px;
+}
+.productos li{
+display: block;
+float: left;
+margin: 30px 70px;
+position: relative;
+bottom: 40px;
+left: 700px;
+}
+.productos li:nth-child(1){
+position: relative;
+left: -20px;
+}
+.caja h4{
+    position: relative;
+    right: 500px;
+}
+.caja p{
+    position: relative;
+    bottom: 300px;
+    left: 305px;
+
+}
