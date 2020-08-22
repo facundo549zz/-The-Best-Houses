@@ -238,7 +238,7 @@ header nav button.burger{
   display: inline-block;
   text-align: center;
   display: flex;
-  margin-top: 30px;
+  margin-top: 0px;
   flex-wrap: wrap;
 }
 
