@@ -23,6 +23,9 @@ header .logo {
   height: 60px;
   border-radius: 15px;
 }
+.navbar-toggler{
+  color: white;
+}
 
 header form input {
   background-color: white;
@@ -46,15 +49,46 @@ header button.icono1,
 .icono2 {
   margin-left: -40px;
 }
-
+header button.icono1 a,
+.icono2 a{
+  color: #162447;
+}
 header ul li a {
   color: white;
   text-decoration: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+  header ul li a {
+    margin: 5px;
+  }
+  header form input {
+    position: absolute;
+    left: 185px;
+    height: 30px;
+    width: 170px;
+    margin-left: -40px;
+  }
   header form .button {
     margin-right: 40px;
+  }
+  header form button {
+    position: absolute;
+    left: 320px;
+    height: 30px;
+    margin-top: 0px;
+  }
+
+  header form .icono1 {
+    position: relative;
+    left: 400px;
+    height: 30px;
+  }
+
+  header form .icono2 {
+    position: relative;
+    left: 190px;
+    height: 30px;
   }
 }
 
@@ -65,14 +99,14 @@ header ul li a {
 
   header form input {
     position: relative;
-    left: 185px;
+    left: 225px;
     height: 30px;
     width: 170px;
   }
 
   header form button {
     position: relative;
-    left: 190px;
+    left: 225px;
     height: 30px;
   }
 
@@ -93,7 +127,14 @@ header ul li a {
 .carousel {
   margin-top: 10px;
   width: 100%;
-
+}
+.carousel-inner img{
+     height:330px;
+}
+@media(min-width: 1024px){
+  .carousel-inner img{
+    height:400px;
+}
 }
 
 /*header nav{
