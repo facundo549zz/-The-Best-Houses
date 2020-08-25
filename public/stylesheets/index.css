@@ -348,13 +348,17 @@ header nav button.burger{
   font-family: Raleway;
   color: white;
 }
-
+.footer-columna span{
+  margin-left: 5%;
+}
 .footer-main .footer-columna .navegacion {
   text-decoration: none;
   margin-top: 40px;
   list-style: none;
 }
-
+.footer-main .footer-columna .navegacion li a{
+  color: white;
+}
 .footer-copy-redes {
   justify-content: flex-end;
 }
@@ -362,16 +366,14 @@ header nav button.burger{
   .footer-main{
     flex-wrap: nowrap;
   }
-
-  .footer-main .footer-columna {
-    justify-content: space-around;
+  .footer-main .footer-columna .navegacion{
+    margin-top: 0px;
   }
 }
 
 @media (min-width: 1024px) {
   .footer-main .footer-columna .navegacion {
     position: relative;
-    left: -280px;
     bottom: 15px;
     display: inline;
     font-size: 20px;
