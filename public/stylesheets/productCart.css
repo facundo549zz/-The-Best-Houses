@@ -2,9 +2,10 @@
     border: solid 1px;
 }
 .caja img{
-    width: 250px;
+    width: 351px;
     position: relative;
-    right: 780px;
+    right: -4px;
+    bottom: 111px;
 }
 .productos li{
 display: block;
@@ -24,13 +25,18 @@ left: -20px;
 }
 .caja p{
     position: relative;
-    bottom: 300px;
-    left: 305px;
+    bottom: 100px;
+    left: 26px;
+}
+.caja h2{
+    position: relative;
+    right: -14px;
+    bottom: 75px;
 }
 .caja h3{
     position: relative;
-    left: 985px;
-    bottom: 400px;
+    left: 264px;
+    bottom: 117px;
 }
 .cupon textarea{
     height: 30px;
@@ -38,12 +44,12 @@ left: -20px;
 }
 .cupon button{
     position: relative;
-    bottom: 10px;
+    bottom: 25px;
 }
 .finalizar button{
     position: relative;
-    left: 1300px;
-    bottom: 40px;
+    left: 184px;
+    bottom: 2px;
 }
 .linea{
     border-bottom: solid 1px rgb(99, 93, 93);
@@ -55,4 +61,18 @@ left: -20px;
 .total h4{
     position: relative;
     left: 5px;
+}
+.row{
+    border: solid 1px rgb(102, 94, 94);
+}
+.row img{
+    
+    width: 100px;
+    position: relative;
+    right: 16px;
+}
+.row h5{
+    position: relative;
+    bottom: -129px;
+    right: 117px;
 }
