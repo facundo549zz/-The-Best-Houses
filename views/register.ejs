@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <%- include('partials/head') %> 
+  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("inputPassword3");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
+  <body>
+    <%- include('partials/header') %>
+    <h4>Ingresa tus datos</h4>
+    <div class="divvv">
+      <img src="/images/logo.jpeg" alt="" />
+      <form method="POST">
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="Nombre">Nombre</label>
+            <input
+              placeholder="Nombre"
+              type="text"
+              class="form-control"
+              id="Nombre"
+              required
+              name="name"
+            />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="Apellido">Apellido</label>
+            <input
+              placeholder="Apellido"
+              type="text"
+              class="form-control"
+              id="Apellido"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="Fecha">Fecha de Nacimiento</label>
+            <input
+              placeholder="Fecha de Nacimiento"
+              type="text"
+              class="form-control"
+              id="Fecha"
+              required
+            />
+          </div>
+          <div class="col-md-6 mb-3">
+            <br />
+            <br />
+            Opcional
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" /> Acepto los
+                <a href=""> Términos y condiciones </a> y las
+                <a href=""> Políticas de privacidad </a> de The Best Bikes
+                <br />
+                <input type="checkbox" /> Deseo recibir
+                <strong> Ofertas </strong> de esta pagina
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Registrar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <%- include('partials/footer') %>
+  </body>
+</html>

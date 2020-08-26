@@ -1,0 +1,113 @@
+.detalle{
+    background-color: rgb(111, 121, 207);
+    height: 250px;
+    margin: 10px;
+    margin-left: 20px;
+}
+h1{
+    margin-left: 2px;
+    font-size: 26px;
+    display: none;
+}
+h3{
+    font-size: 20px;
+}
+.colores p{
+    display: inline;
+   font-size: 16px;
+   padding-left: 10px;
+}
+.detalle .comprar{
+    background: white;
+    border-radius: 10px;
+    margin: 20px 105px;
+}
+.detalle .comprar:hover{
+    background-color: rgb(111, 121, 207);
+}
+.imgProducto img{
+    height: 200px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.text{
+    background-color: rgb(111, 121, 207);
+    height: 960px;
+    margin: 10px;
+    margin-left: 50px;
+    display: none;
+}
+.cardB{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.cardB p{
+    font-size: 15px;
+}
+.cardB .card{
+    margin-bottom: 5px;
+}
+@media(min-width: 768px){
+    .detalle{
+        margin-left: 40px;
+    }
+    .text{
+        display: inline;
+        margin-left: 25px;
+    }
+    .imgProducto img{
+        margin-left: 215px;
+    }
+    .detalle .comprar{
+        margin: 20px 155px;
+    }
+}
+@media(min-width: 1024px){
+    .detalle{
+       height: 350px;
+        margin: 10px;
+        margin-left: 50px;
+    }
+    h1{
+        margin-left: 33px;
+    }
+    h3{
+        font-size: 30px;
+        margin-top: 15px;
+    }
+    h5{
+       font-size: 23px;
+    }
+    .imgProducto img{
+        height: 350px;
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+    .colores p{
+        display: inline;
+       font-size: 20px;
+       margin: 5px;
+    }
+    .text{
+        display: inline;
+        margin-left: 50px;
+    }
+    .cardB{
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+    .detalle .comprar{
+        margin: 20px 90px;
+    }
+    .comprar{
+        width: 140px;
+    }
+    h6{
+        font-size: 22px;
+    }
+}

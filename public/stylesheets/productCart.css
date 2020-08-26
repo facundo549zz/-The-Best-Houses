@@ -1,0 +1,58 @@
+.caja{
+    border: solid 1px;
+}
+.caja img{
+    width: 250px;
+    position: relative;
+    right: 780px;
+}
+.productos li{
+display: block;
+float: left;
+margin: 30px 70px;
+position: relative;
+bottom: 40px;
+left: 700px;
+}
+.productos li:nth-child(1){
+position: relative;
+left: -20px;
+}
+.caja h4{
+    position: relative;
+    right: 500px;
+}
+.caja p{
+    position: relative;
+    bottom: 300px;
+    left: 305px;
+}
+.caja h3{
+    position: relative;
+    left: 985px;
+    bottom: 400px;
+}
+.cupon textarea{
+    height: 30px;
+    width: 300px;
+}
+.cupon button{
+    position: relative;
+    bottom: 10px;
+}
+.finalizar button{
+    position: relative;
+    left: 1300px;
+    bottom: 40px;
+}
+.linea{
+    border-bottom: solid 1px rgb(99, 93, 93);
+    display: inline-block;
+}
+.total{
+    border: solid 1px rgb(102, 94, 94);
+}
+.total h4{
+    position: relative;
+    left: 5px;
+}

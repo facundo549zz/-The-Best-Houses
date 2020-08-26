@@ -1,0 +1,422 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-color: #c9c9c9;
+}
+
+header {
+  background-color: #162447;
+  padding: 10px 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+header .logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+}
+.navbar-toggler{
+  color: white;
+}
+
+header form input {
+  background-color: white;
+  border: 1px solid grey;
+  height: 25px;
+  padding: 0px 5px;
+  border-radius: 10px;
+  width: 100px;
+}
+
+header form button {
+  background-color: white;
+  border: 1px solid grey;
+  height: 25px;
+  padding: 0px 5px;
+  border-radius: 10px;
+  width: 30px;
+}
+
+header button.icono1,
+.icono2 {
+  margin-left: -40px;
+}
+header button.icono1 a,
+.icono2 a{
+  color: #162447;
+}
+header ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  header ul li a {
+    margin: 5px;
+  }
+  header form input {
+    position: absolute;
+    left: 185px;
+    height: 30px;
+    width: 170px;
+    margin-left: -40px;
+  }
+  header form .button {
+    margin-right: 40px;
+  }
+  header form button {
+    position: absolute;
+    left: 320px;
+    height: 30px;
+    margin-top: 0px;
+  }
+
+  header form .icono1 {
+    position: relative;
+    left: 400px;
+    height: 30px;
+  }
+
+  header form .icono2 {
+    position: relative;
+    left: 190px;
+    height: 30px;
+  }
+}
+
+@media(min-width: 1024px) {
+  header ul li a {
+    margin: 15px;
+  }
+
+  header form input {
+    position: relative;
+    left: 225px;
+    height: 30px;
+    width: 170px;
+  }
+
+  header form button {
+    position: relative;
+    left: 225px;
+    height: 30px;
+  }
+
+  header form .icono1 {
+    position: relative;
+    left: 600px;
+    height: 30px;
+  }
+
+  header form .icono2 {
+    position: relative;
+    left: 300px;
+    height: 30px;
+  }
+}
+
+
+.carousel {
+  margin-top: 10px;
+  width: 100%;
+}
+.carousel-inner img{
+     height:330px;
+}
+@media(min-width: 1024px){
+  .carousel-inner img{
+    height:400px;
+}
+}
+
+/*header nav{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header nav button.burger{
+  background-color: white;
+  color: #162447;
+  border-bottom: 20px;
+}*/
+
+
+/* BICICLETAS ARMADAS */
+.section .conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.titulo{
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.titulo h3 {
+  text-align: center;
+  font-size: 2.2em;
+  padding-top: 20px;
+}
+
+.tipobicicletas {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(3,1fr);
+}
+
+.tipobici {
+  width: 98%;
+  height: 150px;
+  border-radius: 50px;
+}
+.montaña{
+  background-image: url('../images/Bicicletas/Montaña/Bicicleta\ Rodado\ 29\ Raleigh\ Mojave\ 4.0/Bicicleta Rodado 29 Raleigh Mojave 4.0.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-row: 2/4;
+  grid-column: 1/2;
+}
+.urbana{
+  background-image: url('../images/Bicicletas/Urbana/Bicicleta\ Rodado\ 26\ HGP\ Melanie\ Vintage/Bicicleta Rodado 26 HGP Melanie Vintage.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-row: 2/4;
+  grid-column: 2/3;
+}
+.bmx{
+  background-image: url('../images/Bicicletas/BMX/Bicicleta\ GW\ Elite\ Mini\ BMX/Bicicleta GW Elite Mini BMX.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-row: 2/4;
+  grid-column: 3/4;
+}
+.infantil{
+  background-image: url('../images/Bicicletas/Infantil/Bicicleta\ Rodado\ 12\ Raleigh\ Cupcake/Bicicleta Rodado 12 Raleigh Cupcake.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-row: 2/4;
+  grid-column: 4/5;
+}
+.ruta{
+  background-image: url('../images/Bicicletas/Ruta/Bicicleta\ Rodado\ 28\ Gravel\ Specialized\ DIVERGE\ E5\ 2019/Bicicleta Rodado 28 Gravel Specialized DIVERGE E5 2019.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-row: 2/4;
+  grid-column: 5/6;
+}
+.section img {
+  width: 100%;
+}
+
+.section h6:hover {
+  transition: ease 1s;
+  color: royalblue;
+  transform: scale(1.2);
+}
+
+.section h6 {
+  text-align: center;
+  margin-top: 25%;
+  color: rgb(151, 39, 39);
+  font-size: 20px;
+}
+
+
+@media(min-width: 768px) {
+  .section .conteiner {
+    justify-content: start;
+  }
+
+  .section img {
+    width: 150px;
+    height: 100px;
+  }
+
+  .section h6 {
+    left: 35px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .section img {
+    width: 100%;
+    height: 150px;
+  }
+}
+
+/*.section .contenido p{
+    width: 90%;
+    height: 90%;
+    left: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .section .contenido a{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }*/
+
+/*PLAN CANJE*/
+.contenedorCanje {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  margin-top: 0px;
+  flex-wrap: wrap;
+}
+
+.contenedorCanje img {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+.contenedorTexto{
+  background-color: rgba(182, 7, 7, 0.705);
+  height: 115px;
+  margin-left: -15px;
+}
+.textoEncima{
+  color: #162447;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 9px;
+  line-height: 9px;
+  text-align: center;
+}
+
+@media(min-width: 768px){
+  .contenedorTexto{
+    height: 246px;
+  }
+  .textoEncima{
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+@media(min-width: 1024px){
+  .contenedorTexto{
+    height: 331px;
+  }
+  .textoEncima{
+    font-size: 31px;
+    line-height: 33px;
+  }
+}
+
+/*PRE FOOTER*/
+.footerPre {
+  display: block;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.pre {
+  color: #162447;
+  display: contents;
+  width: 23%;
+  height: 55px;
+}
+
+.pre h4 {
+  font-size: 10px;
+}
+
+@media (min-width: 1024px) {
+  .pre h4 {
+    font-size: 20px;
+  }
+}
+
+/*  FOOTER  */
+
+.footer {
+  width: 100%;
+  font-family: Raleway;
+  margin-top: 20px;
+}
+
+.footer-container {
+  width: 100%;
+  background: #162447;
+  color: #ebecf1;
+}
+
+.footer-main {
+  width: 98%;
+  margin: auto;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-columna .logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+}
+
+.footer-main .footer-columna {
+  width: calc(100% / 3);
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-main .footer-columna p {
+  margin-left: 5px;
+  margin-bottom: 15px;
+  font-family: Raleway;
+  color: white;
+}
+.footer-columna span{
+  margin-left: 5%;
+}
+.footer-main .footer-columna .navegacion {
+  text-decoration: none;
+  margin-top: 40px;
+  list-style: none;
+}
+.footer-main .footer-columna .navegacion li a{
+  color: white;
+}
+.footer-copy-redes {
+  justify-content: flex-end;
+}
+@media (min-width: 768px){
+  .footer-main{
+    flex-wrap: nowrap;
+  }
+  .footer-main .footer-columna .navegacion{
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-main .footer-columna .navegacion {
+    position: relative;
+    bottom: 15px;
+    display: inline;
+    font-size: 20px;
+  }
+}
