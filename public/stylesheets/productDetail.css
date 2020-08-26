@@ -49,6 +49,21 @@ h3{
 .cardB .card{
     margin-bottom: 5px;
 }
+@media(min-width: 768px){
+    .detalle{
+        margin-left: 40px;
+    }
+    .text{
+        display: inline;
+        margin-left: 25px;
+    }
+    .imgProducto img{
+        margin-left: 215px;
+    }
+    .detalle .comprar{
+        margin: 20px 155px;
+    }
+}
 @media(min-width: 1024px){
     .detalle{
        height: 350px;
@@ -69,6 +84,7 @@ h3{
         height: 350px;
         display: inline-block;
         margin-top: 10px;
+        margin-left: 30px;
     }
     .colores p{
         display: inline;
@@ -77,12 +93,16 @@ h3{
     }
     .text{
         display: inline;
+        margin-left: 50px;
     }
     .cardB{
         display: inline-block;
         margin-top: 10px;
         margin-left: 50px;
         margin-bottom: 20px;
+    }
+    .detalle .comprar{
+        margin: 20px 90px;
     }
     .comprar{
         width: 140px;
