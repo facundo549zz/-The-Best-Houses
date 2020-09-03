@@ -1,0 +1,97 @@
+/*PRE FOOTER*/
+.footerPre {
+    display: block;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .pre {
+    color: #162447;
+    display: contents;
+    width: 23%;
+    height: 55px;
+  }
+  
+  .pre h4 {
+    font-size: 10px;
+  }
+  
+  @media (min-width: 1024px) {
+    .pre h4 {
+      font-size: 20px;
+    }
+  }
+  
+  /*  FOOTER  */
+  
+  .footer {
+    width: 100%;
+    font-family: Raleway;
+    margin-top: 20px;
+  }
+  
+  .footer-container {
+    width: 100%;
+    background: #162447;
+    color: #ebecf1;
+  }
+  
+  .footer-main {
+    width: 98%;
+    margin: auto;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer-columna .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+  }
+  
+  .footer-main .footer-columna {
+    width: calc(100% / 3);
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .footer-main .footer-columna p {
+    margin-left: 5px;
+    margin-bottom: 15px;
+    font-family: Raleway;
+    color: white;
+  }
+  .footer-columna span{
+    margin-left: 5%;
+  }
+  .footer-main .footer-columna .navegacion {
+    text-decoration: none;
+    margin-top: 40px;
+    list-style: none;
+  }
+  .footer-main .footer-columna .navegacion li a{
+    color: white;
+  }
+  .footer-copy-redes {
+    justify-content: flex-end;
+  }
+  @media (min-width: 768px){
+    .footer-main{
+      flex-wrap: nowrap;
+    }
+    .footer-main .footer-columna .navegacion{
+      margin-top: 0px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .footer-main .footer-columna .navegacion {
+      position: relative;
+      bottom: 15px;
+      display: inline;
+      font-size: 20px;
+    }
+  }

@@ -1,3 +1,5 @@
+@import "style.css";
+
 .detalle{
     background-color: rgb(111, 121, 207);
     height: 250px;
@@ -5,7 +7,7 @@
     margin-left: 20px;
 }
 
-h3{
+.gravelTitulo{
     font-size: 20px;
 }
 .colores p{
@@ -16,7 +18,7 @@ h3{
 .detalle .comprar{
     background: white;
     border-radius: 10px;
-    margin: 20px 105px;
+    margin: 15px 100px;
 }
 .detalle .comprar:hover{
     background-color: rgb(111, 121, 207);
@@ -70,7 +72,7 @@ h3{
     h1{
         margin-left: 33px;
     }
-    h3{
+    .gravelTitulo{
         font-size: 30px;
         margin-top: 15px;
     }

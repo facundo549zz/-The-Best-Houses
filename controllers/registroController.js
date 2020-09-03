@@ -1,10 +1,12 @@
 const fs = require('fs')
 const path = require('path')
 
-let registroController ={
-    registro:(req, res) =>{
-        res.render('registro')
+
+module.exports = {
+    registroController:function(req,res){
+        res.render('register',{
+            title: "Detalle del Producto",
+            css: "register.css"
+        })
     },
 }
-
-module.exports = registroController
