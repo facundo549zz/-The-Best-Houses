@@ -11,7 +11,8 @@ var registerRouter = require('./routes/register');
 var producAddRouter = require('./routes/productAdd');
 var producDetailRouter = require('./routes/productDetail');
 var loginRouter = require('./routes/login');
-var errorRouter = require('./routes/error')
+var productsRouter = require('./routes/products')
+
 
 var app = express();
 
@@ -30,9 +31,9 @@ app.use('/users', usersRouter);
 app.use('/carrito', carritoRouter);
 app.use('/register', registerRouter);
 app.use('/login', loginRouter)
+app.use('/products', productsRouter)
 app.use('/productadd', producAddRouter);
 app.use('/productdetail', producDetailRouter);
-app.use('/error', errorRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

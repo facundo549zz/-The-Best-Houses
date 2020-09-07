@@ -1,0 +1,17 @@
+@import "style.css";
+
+
+.todosLosProductos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.prd{
+    font-size: 15px;
+    color: #162447;
+   display: inline-block;
+   padding-bottom: 15px;
+}
+.prd img{
+    width: 120px;
+    height: 110px;
+}
