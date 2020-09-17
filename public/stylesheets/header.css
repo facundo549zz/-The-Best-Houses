@@ -1,0 +1,145 @@
+
+  
+  header {
+    background-color: #162447;
+    padding: 10px 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  header .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+  }
+  .navbar-toggler{
+    color: white;
+    margin-left: -20px;
+  }
+
+  header form input {
+    background-color: white;
+    border: 1px solid grey;
+    height: 25px;
+    padding: 0px 5px;
+    border-radius: 10px;
+    width: 90px;
+  }
+  
+  header form button {
+    background-color: white;
+    border: 1px solid grey;
+    height: 25px;
+    padding: 0px 5px;
+    border-radius: 10px;
+    width: 30px;
+  }
+  
+  header button.icono1,
+  .icono2,.icono3 {
+    margin-left: -20px;
+  }
+  header button.icono1 a,
+  .icono2 a, .icono3 a{
+    color: #162447;
+  }
+ 
+  header ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  @media (min-width: 768px) {
+    header ul li a {
+      margin-right:15px;
+      font-size: 18px;
+    }
+    header form input {
+      position: absolute;
+      height: 30px;
+      width: 150px;
+      margin-left: -300px;
+    }
+    header form .button {
+      margin-right: 40px;
+    }
+    header form button {
+      position: absolute;
+      left: -120px;
+      height: 30px;
+      margin-top: 0px;
+    }
+    header button.icono1,
+    .icono2,.icono3 {
+      margin-left: 0px;
+    }
+    header form .icono1 {
+      position: relative;
+      left: 35px;
+      height: 30px;
+      order:-1;
+    }
+  
+    header form .icono2 {
+      position: relative;
+      left: 10px;
+      height: 30px;
+    }
+    header form .icono3 {
+      position: relative;
+      left: -10px;
+      height: 30px;
+    }
+    header .collapse{
+      
+      margin-left: 70px;
+    
+    }
+    
+  }
+  
+  @media(min-width: 1024px) {
+    header .collapse{
+      
+      margin-left: 80px;
+    
+    }
+    header ul li a {
+      margin: 6px;
+      font-size: 18px;
+    }
+  
+    header form input {
+      position: relative;
+      left: 225px;
+      height: 30px;
+      width: 170px;
+    }
+  
+    header form button {
+      position: relative;
+      left: 225px;
+      height: 30px;
+    }
+  
+    header form .icono1 {
+      position: relative;
+      left: 0px;
+      height: 30px;
+    }
+  
+    header form .icono2 {
+      position: relative;
+      left: -30px;
+      height: 30px;
+    }
+    header form .icono3 {
+      position: relative;
+      left: -55px;
+      height: 30px;
+    }
+  }
+  

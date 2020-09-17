@@ -1,10 +1,10 @@
 var express = require('express');
-const registroController = require('../controllers/registroController');
 var router = express.Router();
+const registroController = require('../controllers/registroController');
+const logDBMiddleware = require('../middlewares/logDBMiddlewares');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('register', { title: 'Express' });
-});
+router.get('/', registroController.registrate);
+
+router.post('/', logDBMiddleware ,registroController.processRegister);
 
 module.exports = router;

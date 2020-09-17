@@ -1,3 +1,24 @@
-.login{
-    display: inline-block;
+@import "style.css";
+
+
+.form-group button {
+    border: solid 1px rgb(73, 71, 71)
+}
+
+.divvv {
+    width: 90%;
+    margin: 0px auto 30px auto;
+    border: solid 3px rgb(219, 219, 219);
+    padding: 20px;
+}
+
+.divvv img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.h4{
+    margin-bottom: 30px;
 }
