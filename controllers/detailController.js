@@ -9,23 +9,16 @@ module.exports = {
             listadoDeProductos : productos
         })
     },
-    detailProducto:function(req,res){
-        res.render('productDetail',{
-            title: "Detalle del Producto",
-            css: "productDetail.css"
-        })
-    },
-
-    detalleProducto:(req ,res)=>{
+    detailProducto:(req ,res)=>{
         let id = req.params.id;
         let producto = productos.filter(producto => {
             return producto.id == id
         })
-        res.render('detalleProducto', {
+        res.render('productDetail', {
             title: "Detalle del Producto",
             id: id,
             producto: producto[0],
-            css:"detalleProducto.css",
+            css:"productDetail.css",
 
         })
     },
