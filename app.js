@@ -5,20 +5,22 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var carritoRouter = require('./routes/productCart');
 var registerRouter = require('./routes/register');
 var producAddRouter = require('./routes/productAdd');
 var producDetailRouter = require('./routes/productDetail');
-var loginRouter = require('./routes/login');
 var productsRouter = require('./routes/products')
-
+var loginRouter = require('./routes/login');
+var errorRouter = require('./routes/error')
+var logMiddlewares = require('./middlewares/logMiddlewares');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(logMiddlewares)
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -27,7 +29,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/carrito', carritoRouter);
 app.use('/register', registerRouter);
 app.use('/login', loginRouter)

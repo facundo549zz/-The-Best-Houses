@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
-const controller = require('../controllers/registroController');
+const registroController = require('../controllers/registroController');
+const logDBMiddleware = require('../middlewares/logDBMiddlewares');
 
+router.get('/', registroController.registrate);
 
-router.get('/', controller.registrate)
-router.post('/',controller.processRegister);
+router.post('/', logDBMiddleware ,registroController.processRegister);
 
 module.exports = router;

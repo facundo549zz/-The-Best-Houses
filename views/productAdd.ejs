@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-  
-  <%- include('partials/head') %> 
-  
+  <%- include('partials/head') %>
+
   <body>
     <%- include('partials/header') %>
 
@@ -31,7 +30,11 @@
     <div class="container cargaProducto">
       <div class="datobici">
         <div class="row">
-          <input type="text" id="nombreProducto" placeholder="Nombre del Producto" />
+          <input
+            type="text"
+            id="nombreProducto"
+            placeholder="Nombre del Producto"
+          />
         </div>
         <div class="row mt-2">
           <div class="col-6">
@@ -39,7 +42,11 @@
           </div>
           <div class="col-6">
             <select class="custom-select" name="Tipo" id="Tipo">
-              <option value="">...</option>
+              <option value="">BMX</option>
+              <option value="">Montaña</option>
+              <option value="">Ruta</option>
+              <option value="">Infantil</option>
+              <option value="">Urbana</option>
             </select>
           </div>
         </div>
@@ -49,7 +56,11 @@
           </div>
           <div class="col-6">
             <select class="custom-select" name="Marcas" id="Marcas">
-              <option value="">...</option>
+              <option value="">Venzo</option>
+              <option value="">Specialized</option>
+              <option value="">Olmo</option>
+              <option value="">Raleigh</option>
+              <option value="">Scott</option>
             </select>
           </div>
         </div>
@@ -69,24 +80,42 @@
           </div>
           <div class="col-6">
             <select class="custom-select" name="Colores" id="Colores">
-              <option value="">...</option>
+              <option value="">Negro</option>
+              <option value="">Gris</option>
+              <option value="">Blanco</option>
+              <option value="">Violeta</option>
+              <option value="">Rosado</option>
+              <option value="">Azul</option>
+              <option value="">Celeste</option>
+              <option value="">Verde</option>
+              <option value="">Amarillo</option>
+              <option value="">Naranja</option>
+              <option value="">Rojo</option>
             </select>
           </div>
         </div>
         <div class="row mt-2">
           <div class="col-6">
-            <select class="custom-select" name="Precio(Pesos)" id="Precio(Pesos)">
+            <select
+              class="custom-select"
+              name="Precio(Pesos)"
+              id="Precio(Pesos)"
+            >
               <option value="">...</option>
             </select>
           </div>
           <div class="col-6">
-            <select class="custom-select" name="Precio(Dolares)" id="Precio(Dolares)">
+            <select
+              class="custom-select"
+              name="Precio(Dolares)"
+              id="Precio(Dolares)"
+            >
               <option value="">...</option>
             </select>
           </div>
         </div>
         <div class="row">
-            <button type="button" class="btn btn-success">Cargar Producto</button>
+          <button type="button" class="btn btn-success">Cargar Producto</button>
         </div>
       </div>
       <div class="cargafoto">
@@ -98,7 +127,8 @@
             lang="es"
           />
           <label class="custom-file-label" for="customFileLang"
-            >Seleccionar Archivo</label>
+            >Seleccionar Archivo</label
+          >
         </div>
       </div>
       <div class="fichaTecnica">
