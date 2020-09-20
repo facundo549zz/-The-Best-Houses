@@ -6,7 +6,7 @@ const path = require('path');
 module.exports = {
     registrate:function(req,res){
         res.render('register',{
-            title: "registro",
+            title: "Registrate aqui",
             css: "register.css"
         })
     },
@@ -24,9 +24,9 @@ module.exports = {
             };
             usuarios.push(nuevoUsuario);
             fs.writeFileSync(path.join(__dirname,'..','data','users.json'),JSON.stringify(usuarios),'utf-8');
-            res.render('register',{
+            res.render('login',{
              title:"Gracias por registrarte, ingresá a tu cuenta",
-             css: "register.css"
+             css: "login.css"
             });
         
         
