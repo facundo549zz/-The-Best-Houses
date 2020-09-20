@@ -7,7 +7,7 @@ const path = require('path');
 module.exports = {
    login:function(req,res){
         res.render('login',{
-            title: "Ingresa a tu cuanta",
+            title: "Ingresa a tu cuenta",
             css: "login.css",
             usuario:req.session.usuario
         })
@@ -22,14 +22,13 @@ module.exports = {
                     image: usuario.image
                 } 
                 if(req.body.recordar){
-                    res.coockie('userTheBestBikes',req.session.usuario,{maxAge:1000*60*2})
+                    res.cookie('userTheBestBikes',req.session.usuario,{maxAge:1000*60*2})
                 }
                 res.redirect('/')
             }else{
                 res.render('login',{
                     title:"Ingresá a tu cuenta",
                     css: "login.css",
-                    errors:errors.mapped(),
                     old:req.body,
                     usuario: req.session.usuario
                    })
