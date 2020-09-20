@@ -11,7 +11,6 @@ var producAddRouter = require('./routes/productAdd');
 var producDetailRouter = require('./routes/productDetail');
 var productsRouter = require('./routes/products')
 var loginRouter = require('./routes/login');
-var errorRouter = require('./routes/error')
 var logMiddlewares = require('./middlewares/logMiddlewares');
 
 var app = express();
@@ -38,7 +37,7 @@ app.use('/productdetail', producDetailRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  res.status(400).render('not-found')
 });
 
 // error handler
@@ -49,7 +48,10 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('not-found', {
+    title: "Error",
+    css: "index.css"
+});
 });
 
 module.exports = app;
