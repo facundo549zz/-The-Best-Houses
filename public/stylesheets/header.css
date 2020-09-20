@@ -51,6 +51,13 @@
     color: white;
     text-decoration: none;
   }
+  header .avatar .mr-2{
+    color: white;
+    font-size: 17px;
+  }
+  header .avatar {
+    margin-top: -5px;
+  }
   
   @media (min-width: 768px) {
     header ul li a {
@@ -78,25 +85,26 @@
     }
     header form .icono1 {
       position: relative;
-      left: 35px;
+      left: 90px;
       height: 30px;
-      order:-1;
     }
   
     header form .icono2 {
       position: relative;
-      left: 10px;
+      left: 65px;
       height: 30px;
     }
     header form .icono3 {
       position: relative;
-      left: -10px;
+      left: 40px;
       height: 30px;
     }
     header .collapse{
-      
       margin-left: 70px;
-    
+    }
+    header .avatar {
+      margin-top: -15px;
+      left: -30px;
     }
     
   }
@@ -140,6 +148,14 @@
       position: relative;
       left: -55px;
       height: 30px;
+    }
+    header .avatar .mr-2{
+      font-size: 20px;
+    }
+    header .avatar img{
+      width: 40px;
+      height: 40px;
+      margin-top: -11px;
     }
   }
   

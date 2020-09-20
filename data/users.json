@@ -404,7 +404,8 @@
         "name": "alejandro",
         "apellido": "guaymas",
         "email": "ale_guaymas@hotmail.com",
-        "password": "123",
-        "fecha": "27/05/1991"
+        "password": "$2b$10$3LYJTACesPpTPGVnBmYWf.bbCLjSP.5HqPclVTbzSrNNJ8cylZiDG",
+        "fecha": "27/05/1991",
+        "image": "image-1600576079575.jpg"
     }
 ]

@@ -8,25 +8,30 @@ module.exports = {
    login:function(req,res){
         res.render('login',{
             title: "Ingresa a tu cuanta",
-            css: "login.css"
+            css: "login.css",
+            usuario:req.session.usuario
         })
     },
     processLogin:function(req,res){
         usuarios.forEach(usuario => {
             if(usuario.email == req.body.email){
-                req.usuario = {
+                req.session.usuario = {
                     id:usuario.id,
-                    name: usuario.nombre, 
-                    apelliido: usuario.apellido,
-                    email:usuario.email
+                    nick:usuario.nombre + " " + usuario.apellido,
+                    email:usuario.email,
+                    image: usuario.image
                 } 
+                if(req.body.recordar){
+                    res.coockie('userTheBestBikes',req.session.usuario,{maxAge:1000*60*2})
+                }
+                res.redirect('/')
             }else{
                 res.render('login',{
                     title:"Ingresá a tu cuenta",
                     css: "login.css",
                     errors:errors.mapped(),
                     old:req.body,
-                    usuario: req.usuario
+                    usuario: req.session.usuario
                    })
             }
         });
@@ -39,6 +44,14 @@ module.exports = {
                 return producto.category != "tipos de Bicicletas"
             }),
             css:"profile.css",
+            usuario:req.session.usuario
         })
+    },
+    logout:function(req,res){
+        req.session.destroy();
+        if(req.cookies.userTheBestBikes){
+            res.cookie('userTheBestBikes','',{maxAge:-1})
+        }
+        return res.redirect('/')
     },
 }

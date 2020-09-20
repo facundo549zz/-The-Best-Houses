@@ -1,4 +1,6 @@
+
 const usuarios = require('../data/usuarios');
+const bcrypt = require('bcrypt');
 
 const fs = require('fs');
 const path = require('path');
@@ -18,8 +20,9 @@ module.exports = {
                 name: req.body.name,
                 apellido: req.body.apellido,
                 email: req.body.email,
-               password: req.body.password,
-               fecha: req.body.fecha
+               password: bcrypt.hashSync(req.body.password,10),
+               fecha: req.body.fecha,
+               image: req.files[0].filename,
                 
             };
             usuarios.push(nuevoUsuario);

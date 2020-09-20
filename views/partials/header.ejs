@@ -13,7 +13,7 @@
             </form>
             </div>
 
-      <div class="col-2 col-md-9 col-lg-9">
+      <div class="col-2 col-md-8 col-lg-8">
         <!--barra de navegacion-->
         <nav class="navbar-expand-md">
           <!--boton de hamburguesa-->
@@ -63,6 +63,24 @@
           </button>
         </form>
       </div>
+      <div class="col-12 col-md-12 col-lg-1 d-flex justify-content-end align-items-center avatar">
+
+        <% if (typeof usuario == "undefined") { %>
+        <a href="">
+            <h5 class="mr-2">Usuario</h5>
+        </a>
+        <a href=""><img src="/images/users/default.png" alt="" width="30px" height="30px"></a>
+
+        <% } else{ %>
+      
+        <a href="/login/profile">
+            <h5 class="mr-2"><%= usuario.nick %> </h5>
+        </a>
+        <a href="/login/profile"><img src="/images/users/<%= usuario.avatar %>" alt="" width="30px" height="30px"
+            class="rounded-circle avatar"></a>
+        <% } %>
+    </div>
+
     </div>
   </div>
 </header>
