@@ -24,7 +24,7 @@ module.exports = {
                 if(req.body.recordar){
                     res.cookie('userTheBestBikes',req.session.usuario,{maxAge:1000*60*2})
                 }
-                res.redirect('/')
+                res.redirect('/login/profile')
             }else{
                 res.render('login',{
                     title:"Ingresá a tu cuenta",
