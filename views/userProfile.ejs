@@ -95,6 +95,7 @@
                 <div class="container cargaProducto">
                   <div class="datobici">
                     <div class="row">
+                      <form action="" method="POST">
                       <input
                         type="text"
                         id="nombreProducto"
@@ -106,7 +107,7 @@
                         <span>Tipo</span>
                       </div>
                       <div class="col-6">
-                        <select class="custom-select" name="Tipo" id="Tipo">
+                        <select class="custom-select" name="category" id="category">
                           <option value="">BMX</option>
                           <option value="">Montaña</option>
                           <option value="">Ruta</option>
@@ -134,7 +135,7 @@
                         <span>Modelo</span>
                       </div>
                       <div class="col-6">
-                        <input type="text" class="inPrecio">
+                        <input type="text" class="inPrecio" name="price" id="price">
                       </div>
                     </div>
                     <div class="row mt-2">
@@ -185,22 +186,24 @@
                   <div class="fichaTecnica">
                     <h5>Ficha Tecnica</h5>
                     <textarea
-                      name="fichaTecnica"
-                      id="fichaTecnica"
+                      name="description"
+                      id="description"
                       cols="30"
                       rows="10"
                     ></textarea>
                   </div>
                 </div>
+                </div>
+              </form>
                 <div
                   class="tab-pane fade show active"
                   id="productos"
                   role="tabpanel"
-                  aria-labelledby="profile-tab">
-                </div> 
+                  aria-labelledby="profile-tab"
+                >
+                <h1>Tus Publicaciones</h1>
                   <div class="row productos p-4">
                     <% productos.forEach(producto => { %>
-
                     <div class="col-12 col-md-3 col-xl-2">
                       <div class="contenido">
                         <figure>
@@ -210,11 +213,9 @@
                               alt=" "
                           /></a>
                         </figure>
-
                         <%if (producto.name.length > 20) {%>
                         <p><%- producto.name.slice(0,20) + '...'%></p>
                         <%}%>
-
                         <div class="d-flex justify-content-around">
                           <form
                             action="/products/show/<%= producto.id %>/show"
@@ -243,7 +244,6 @@
                         </div>
                       </div>
                     </div>
-
                     <% }) %>
                   </div>
                   <!--finaliza el row-->

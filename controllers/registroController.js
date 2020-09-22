@@ -23,7 +23,6 @@ module.exports = {
                password: bcrypt.hashSync(req.body.password,10),
                fecha: req.body.fecha,
                image: req.files[0].filename,
-                
             };
             usuarios.push(nuevoUsuario);
             fs.writeFileSync(path.join(__dirname,'..','data','users.json'),JSON.stringify(usuarios),'utf-8');
@@ -31,7 +30,5 @@ module.exports = {
              title:"Gracias por registrarte, ingresá a tu cuenta",
              css: "login.css"
             });
-        
-        
      },
 }
