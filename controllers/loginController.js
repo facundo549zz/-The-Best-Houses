@@ -1,5 +1,5 @@
 const usuarios = require('../data/usuarios');
-const productos = require('../data/products.json');
+const productos = require('../data/products');
 
 const fs = require('fs');
 const path = require('path');
@@ -39,8 +39,8 @@ module.exports = {
     profile: function(req,res){
         res.render('userProfile',{
             title: "Perfil de usuario",
-            productos: productos.filter(producto=>{
-                return producto.category != "tipos de Bicicletas"
+            productos:productos.filter(producto=>{
+                return producto.category != "todosLosProductos" && producto.category != "montaña" && producto.category != "infantil" && producto.category != "ruta" && producto.category != "BMX" && producto.category != "urbana"
             }),
             css:"profile.css",
             usuario:req.session.usuario

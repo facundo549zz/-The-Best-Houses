@@ -1,24 +1,24 @@
 @import "style.css";
 
-.cargaProducto{
+.cargaProducto {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,430px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 430px);
 }
 
-.datobici{
+.datobici {
     display: grid;
-    grid-template-rows: repeat(7,1fr);
+    grid-template-rows: repeat(7, 1fr);
     border: solid 1px rgb(151, 148, 148);
     border-radius: 30px;
-    -webkit-box-shadow: 6px 5px 5px 0px rgba(0,0,0,0.28);
-    -moz-box-shadow: 6px 5px 5px 0px rgba(0,0,0,0.28);
-    box-shadow: 6px 5px 5px 0px rgba(0,0,0,0.28);
+    -webkit-box-shadow: 6px 5px 5px 0px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 6px 5px 5px 0px rgba(0, 0, 0, 0.28);
+    box-shadow: 6px 5px 5px 0px rgba(0, 0, 0, 0.28);
     width: 90%;
     padding: 10px;
 }
 
-#nombreProducto{
+#nombreProducto {
     border: none;
     background-color: #c9c9c9;
     border-bottom: solid 2px rgb(114, 114, 114);
@@ -28,16 +28,41 @@
     font-size: 2rem;
     text-align: center;
 }
-button{
+
+button {
     width: 50%;
     margin: 0 auto;
     margin-top: 20px;
 }
 
-span{
+span {
     margin-left: 30%;
 }
 
-.fichaTecnica{
+.fichaTecnica {
     margin-top: 20px;
+}
+
+.inPrecio {
+    width: 75px;
+    border: 4px solid white;
+    border-radius: 3px;
+}
+
+@media(min-width: 768px) {
+    .inPrecio {
+        width: 130px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .inPrecio {
+        width: 184px;
+    }
+}
+
+@media(min-width: 1440px) {
+    .inPrecio {
+        width: 224px;
+    }
 }
