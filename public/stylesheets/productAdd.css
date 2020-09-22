@@ -41,3 +41,24 @@ span{
 .fichaTecnica{
     margin-top: 20px;
 }
+.inPrecio{
+    width: 75px;
+    border: 4px solid white;
+    border-radius: 3px;
+}
+
+@media(min-width: 768px){
+    .inPrecio{
+        width: 130px;
+    }
+}
+@media(min-width: 1024px){
+    .inPrecio{
+        width: 184px;
+    }
+}
+@media(min-width: 1440px){
+    .inPrecio{
+        width: 224px;
+    }
+}
