@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var session = require('express-session');
+
+
 var indexRouter = require('./routes/index');
 var carritoRouter = require('./routes/productCart');
 var registerRouter = require('./routes/register');
@@ -19,13 +22,17 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(logMiddlewares)
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+app.use(logMiddlewares);
+app.use(session({secret:"TheBestBikes"}));
+
 
 app.use('/', indexRouter);
 app.use('/carrito', carritoRouter);

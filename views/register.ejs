@@ -18,7 +18,7 @@
     <h1 class="regis"><%= title %></h1>
     <div class="divvv">
       <img src="/images/logo.jpeg" alt="" />
-      <form method="POST" action="/register">
+      <form method="POST" action="" enctype="multipart/form-data">
         <div class="form-row">
           <div class="col-md-6 mb-3">
             <label for="Nombre">Nombre</label>
@@ -44,7 +44,7 @@
           </div>
 
           <div class="col-md-6 mb-3">
-            <label for="email">email</label>
+            <label for="email">Email</label>
             <input
               placeholder="email"
               type="email"
@@ -67,10 +67,10 @@
           
         </div>
 
-        </div>
-        <div class="form-row">
+        
+       
           <div class="col-md-6 mb-3">
-            <label for="fecha">Fecha de Nacimiento</label>
+            <label for="fecha">Fecha de Nacimiento (Opcional)</label>
             <input
               placeholder="Fecha de Nacimiento"
               type="text"
@@ -78,12 +78,17 @@
               name="fecha"
             />
           </div>
-          <div class="col-md-6 mb-3">
-            <br />
-            <br />
-            Opcional
-          </div>
+        
+              <div class="col-md-6 mb-3">
+              <div class="custom-file avatar">
+              <label class="custom-file-label" for="customFileLang">Imagen de perfil</label>
+              <input placeholder="Seleccionar Archivo" type="file" class="form-control" id="customFileLang" lang="es" name="image" multiple/>
+              </div>
+              </div>
+
         </div>
+
+        
 
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
