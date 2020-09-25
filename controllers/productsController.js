@@ -22,4 +22,16 @@ module.exports = {
 
         })
     },
+    addController:function(req,res){
+        res.render('productAdd',{
+            title: "Detalle del Producto",
+            css: "productAdd.css"
+        })
+    },
+    carritoController:function(req,res){
+        res.render('productCart',{
+            title: "Detalle del Producto",
+            css: "productCart.css"
+        })
+    },
 }
