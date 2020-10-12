@@ -671,3 +671,7 @@ Se ingreso en la página /login/profile
 Se ingreso en la página /favicon.ico
 Se ingreso en la página /login/profile
 Se ingreso en la página /favicon.ico
+Se ingreso en la página /login/profile
+Se ingreso en la página /favicon.ico
+Se ingreso en la página /login/profile
+Se ingreso en la página /favicon.ico
