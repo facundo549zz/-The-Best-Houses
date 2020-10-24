@@ -1,4 +1,10 @@
 @import "style.css";
-h1{
-    background-color: red;
+.imgError{
+    width: 100%;
+}
+@media(min-width: 1024px){
+    .imgError{
+        width: 100%;
+    height: 460px;
+    }   
 }

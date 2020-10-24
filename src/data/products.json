@@ -1,0 +1,277 @@
+[
+    {
+    "id": "1",
+    "category" : "BMX",
+     "marca": "Venzo",
+    "rodado": "29",
+    "name": "Venzo Eolo",
+    "description": "Rodado 29, talla L, velocidades 24(3x8)",
+    "image": "Bicicleta GW Elite Mini BMX.png", 
+    "colors": "red",
+    "price": "12.945"
+    },
+    {
+    "id": "2",
+    "category" : "BMX",
+     "marca": "Venzo",
+    "rodado": "29",
+    "name": "Venzo Eolo",
+    "description": "Rodado 29, talla L, velocidades 24(3x8)",
+    "image": "BICICLETA VENZO INFERNO R20 ROJOCELESTE.JPG", 
+    "colors": "blue",
+    "price": "12.845"
+    },
+    {
+    "id": "3",
+    "category" : "BMX",
+     "marca": "Venzo",
+    "rodado": "29",
+    "name": "Venzo Eolo",
+    "description": "Rodado 29, talla L, velocidades 24(3x8)",
+    "image": "Bicicleta GW Elite Mini BMX.png", 
+    "colors": "grey",
+    "price": "14.345"
+    },{
+    "id": "4",
+    "category" : "BMX",
+     "marca": "Venzo",
+    "rodado": "28",
+    "name": "Venzo Eolo",
+    "description": "Rodado 28, talla L, velocidades 24(3x8)",
+    "image": "BICICLETA VENZO INFERNO R20 NEGRONARANJA.JPG", 
+    "colors": "black",
+    "price": "19.345"
+    },
+    {
+    "id": "5",
+    "category" : "BMX",
+    "marca": "Venzo",
+    "rodado": "28",
+    "name": "Venzo Eolo",
+    "description": "Rodado 28, talla L, velocidades 24(3x8)",
+    "image": "Bicicleta GW Elite Mini BMX.png", 
+    "colors": "yellow",
+    "price": "89.345"
+    },
+    {
+    "id": "6",
+    "category" : "ruta",
+     "marca": "Specialized",
+    "rodado": "28",
+    "name": "DIVERGE COMP E5",
+    "description": "Rodado 28, talla M, velocidades 11(3x8)",
+    "image": "Bicicleta Rodado 28 Gravel Specialized DIVERGE E5 2019.JPG", 
+    "colors": "blue",
+    "price": "152.345"
+    },
+      {
+    "id": "7",
+    "category" : "ruta",
+     "marca": "Specialized",
+    "rodado": "29",
+    "name": "DIVERGE COMP E6",
+    "description": "Rodado 29, talla L, velocidades 19(3x8)",
+    "image": "Bicicleta Rodado 28 Specialized DIVERGE E5 ELITE 2019 Mujer.JPG", 
+    "colors": "red",
+    "price": "12.645"
+    },
+      {
+    "id": "8",
+    "category" : "ruta",
+     "marca": "Specialized",
+    "rodado": "29",
+    "name": "DIVERGE COMP E8",
+    "description": "Rodado 29, talla L, velocidades 24(3x8)",
+    "image": "Bicicleta Rodado 28 Specialized VENGE PRO - SRAM eTAP 2020.JPG", 
+    "colors": "blue",
+    "price": "12.775"
+    },
+      {
+    "id": "9",
+    "category" : "ruta",
+     "marca": "Specialized",
+    "rodado": "28",
+    "name": "DIVERGE ELITE E5",
+    "description": "Rodado 28, talla M, velocidades 11(3x8)",
+    "image": "Bicicleta Rodado 28 Gravel Specialized DIVERGE E5 2019.JPG", 
+    "colors": "grey",
+    "price": "32.345"
+    },
+      {
+    "id": "10",
+    "category" : "ruta",
+     "marca": "Olmo",
+    "rodado": "29",
+    "name": "DIVERGE ELITE E3",
+    "description": "Rodado 29, talla L, velocidades 21(3x8)",
+    "image": "Bicicleta Rodado 28 Specialized DIVERGE E5 ELITE 2019 Mujer.JPG", 
+    "colors": "black",
+    "price": "42.345"
+    },
+      {
+    "id": "11",
+    "category" : "urbana",
+     "marca": " Olmo",
+    "rodado": "28",
+    "name": "Amelie COMP",
+    "description": "Rodado 28, talla M, velocidades 16(3x8)",
+    "image": "Bicicleta Rodado 26 HGP Melanie Vintage.PNG", 
+    "colors": "red",
+    "price": "16.345"
+    }, 
+    {
+    "id": "12",
+    "category" : "urbana",
+     "marca": " Olmo",
+    "rodado": "28",
+    "name": "Amelie E5",
+    "description": "Rodado 28, talla M, velocidades 11(3x8)",
+    "image": "Bicicleta Rodado 26 HGP Melanie VintageIMG3.png", 
+    "colors": "blue",
+    "price": "13.345"
+    },
+    {
+    "id": "13",
+    "category" : "urbana",
+     "marca": " Olmo",
+    "rodado": "29",
+    "name": "Free Time ",
+    "description": "Rodado 29, talla M, velocidades 11(3x8)",
+    "image": "Bicicleta Rodado 26 HGP Playera Hombre 6 vel.PNG", 
+    "colors": "grey",
+    "price": "9.345"
+    },
+    {
+    "id": "14",
+    "category" : "urbana",
+     "marca": "Raleigh",
+    "rodado": "29",
+    "name": "Raleigh Urban ",
+    "description": "Rodado 29, talla M, velocidades 11(3x8)",
+    "image": "Bicicleta Rodado 28 Raleigh Urban 1.1.JPG", 
+    "colors": "black",
+    "price": "12.995"
+    },
+    {
+    "id": "15",
+    "category" : "urbana",
+     "marca": "Raleigh",
+    "rodado": "29",
+    "name": "Raleigh free time ",
+    "description": "Rodado 29, talla M, velocidades 11(3x8)",
+    "image": "Bicicleta Rodado 26 HGP Melanie Vintage.PNG", 
+    "colors": "black",
+    "price": "12.399"
+    },
+    {
+    "id": "16",
+    "category" : "infantil",
+     "marca": "olmo",
+    "rodado": "12",
+    "name": "olmo fire free",
+    "description": "Rodado 12, talla s, velocidades 16",
+    "image": "Bicicleta Rodado 12 Raleigh Cupcake.PNG", 
+    "colors": "red",
+    "price": "8.345"
+    },
+    {
+    "id": "17",
+    "category" : "infantil",
+     "marca": "olmo",
+    "rodado": "12",
+    "name": "olmo free dog",
+    "description": "Rodado 12, talla s, velocidades 18",
+    "image": "Bicicleta Rodado 12 Raleigh CupcakeIMG2.PNG", 
+    "colors": "blue",
+    "price": "7.345"
+    },
+    {
+    "id": "18",
+    "category" : "infantil",
+     "marca": "olmo",
+    "rodado": "16",
+    "name": "olmo fire free",
+    "description": "Rodado 16, talla s, velocidades 20",
+    "image": "Bicicleta Rodado 12 Raleigh MXR.PNG", 
+    "colors": "black",
+    "price": "11.345"
+    },
+    {
+    "id": "19",
+    "category" : "infantil",
+     "marca": "olmo",
+    "rodado": "16",
+    "name": "olmo poker kid",
+    "description": "Rodado 16, talla s, velocidades 20",
+    "image": "Bicicleta Rodado 12 Raleigh MXRIMG2.PNG", 
+    "colors": "red",
+    "price": "10.345"
+    },
+    {
+    "id": "20",
+    "category" : "infantil",
+     "marca": "olmo",
+    "rodado": "20",
+    "name": "olmo for nite",
+    "description": "Rodado 20, talla s, velocidades 22",
+    "image": "Bicicleta Rodado 12 Raleigh CupcakeIMG2.PNG", 
+    "colors": "black",
+    "price": "8.345"
+    },
+    {
+    "id": "21",
+    "category" : "montaña",
+     "marca": "olmo",
+    "rodado": "20",
+    "name": "olmo wow",
+    "description": "Rodado 20, talla s, velocidades 32",
+    "image": "Bicicleta Rodado 29 Raleigh Mojave 4.0IMG2.PNG", 
+    "colors": "black",
+    "price": "12.555"
+    },
+    {
+    "id": "22",
+    "category" : "montaña",
+     "marca": "scott",
+    "rodado": "29",
+    "name": "scott aspect 950",
+    "description": "Rodado 29, talla L, velocidades 12(3x6)",
+    "image": "Bicicleta Rodado 29 Specialized CHISEL COMP 2019IMG3.JPG", 
+    "colors": "red",
+    "price": "12.465"
+    },
+      {
+    "id": "23",
+    "category" : "montaña",
+     "marca": "scott",
+    "rodado": "29",
+    "name": "scott link 950",
+    "description": "Rodado 29, talla L, velocidades 12(3x6)",
+    "image": "Bicicleta Rodado 29 Specialized EPIC HARDTAIL PRO 2020.JPG", 
+    "colors": "blue",
+    "price": "12.665"
+    },
+        {
+    "id": "24",
+    "category" : "montaña",
+     "marca": "scott",
+    "rodado": "28",
+    "name": "scott princes 950",
+    "description": "Rodado 28, talla M, velocidades 12(3x6)",
+    "image": "Bicicleta Rodado 29 Raleigh Mojave 4.0IMG2.PNG", 
+    "colors": "black",
+    "price": "17.345"
+    },
+        {
+    "id": "25",
+    "category" : "montaña",
+     "marca": "scott",
+    "rodado": "28",
+    "name": "scott joe 950",
+    "description": "Rodado 28, talla M, velocidades 12(3x6)",
+    "image": "Bicicleta Rodado 29 Specialized EPIC HARDTAIL PRO 2020.JPG", 
+    "colors": "red",
+    "price": "14.345"
+    }
+  ]
+  

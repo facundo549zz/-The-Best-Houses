@@ -1,9 +1,0 @@
-Se creó un registro al ingresar en la página /
-Se creó un registro al ingresar en la página /
-Se creó un registro al ingresar en la página /
-Se creó un registro al ingresar en la página /
-Se creó un registro al ingresar en la página /
-Se creó un registro al ingresar en la página http://localhost:3000/register
-Se creó un registro al ingresar en la página http://localhost:3000/register
-Se creó un registro al ingresar en la página http://localhost:3000/register
-Se creó un registro al ingresar en la página http://localhost:3000/register

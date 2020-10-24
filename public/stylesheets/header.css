@@ -85,18 +85,18 @@
     }
     header form .icono1 {
       position: relative;
-      left: 90px;
+      left: 30px;
       height: 30px;
     }
   
     header form .icono2 {
       position: relative;
-      left: 65px;
+      left: 10px;
       height: 30px;
     }
     header form .icono3 {
       position: relative;
-      left: 40px;
+      left: -9px;
       height: 30px;
     }
     header .collapse{

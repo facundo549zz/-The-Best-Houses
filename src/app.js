@@ -8,12 +8,8 @@ var session = require('express-session');
 
 
 var indexRouter = require('./routes/index');
-var carritoRouter = require('./routes/productCart');
-var registerRouter = require('./routes/register');
-var producAddRouter = require('./routes/productAdd');
-var producDetailRouter = require('./routes/productDetail');
-var productsRouter = require('./routes/products')
-var loginRouter = require('./routes/login');
+var productsRouter = require('./routes/products');
+var usersRouter= require('./routes/users');
 var logMiddlewares = require('./middlewares/logMiddlewares');
 
 var app = express();
@@ -27,7 +23,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 
 app.use(logMiddlewares);
@@ -35,12 +31,8 @@ app.use(session({secret:"TheBestBikes"}));
 
 
 app.use('/', indexRouter);
-app.use('/carrito', carritoRouter);
-app.use('/register', registerRouter);
-app.use('/login', loginRouter)
-app.use('/products', productsRouter)
-app.use('/productadd', producAddRouter);
-app.use('/productdetail', producDetailRouter);
+app.use('/users', usersRouter);
+app.use('/products', productsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -57,7 +49,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('not-found', {
     title: "Error",
-    css: "index.css"
+    css: "error.css"
 });
 });
 
