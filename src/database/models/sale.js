@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
     }
     let sale = sequelize.define(alias,cols,config);
 
-    sale.associate = function(models){
+    /*sale.associate = function(models){
         sale.belongsTo(models.user,{
             as:"compra-usuario",
             foreignKey:"id_usuario"
@@ -33,7 +33,7 @@ module.exports = (sequelize, dataTypes) => {
             foreingKey:"id_producto"
             
         })
-    }
+    }*/
 
     return sale;
 }
