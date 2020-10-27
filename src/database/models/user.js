@@ -1,13 +1,11 @@
-const { Sequelize, DataTypes } = require("sequelize/types");
-const config = require("../config/config");
 
-module.exports= (sequelize, DataTypes) => {
+module.exports= (sequelize, dataTypes) => {
 
     let alias = "user";
 
     let cols = {
         id:{
-            type:dataTypes.INTEGER(11),
+            type: dataTypes.INTEGER(11),
             allowNull:false, //permite nulo?
             autoIncrement: true,
             primaryKey:true
@@ -59,12 +57,11 @@ module.exports= (sequelize, DataTypes) => {
 
     const user = sequelize.define(alias, cols, config);
 
-    /*user.associate = function(models){
-        user.hasMany(models.sale,{ 
+    user.associate = function(models){
+        user.hasMany(models.sale, { 
             as:"compra-usuario",
             foreignKey:"id_usuario"
         })
-
-    }*/
+    }
     return user;
 }

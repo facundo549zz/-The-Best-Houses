@@ -1,16 +1,14 @@
-const { Sequelize, DataTypes } = require("sequelize/types");
-const config = require("../config/config");
 
-module.exports= (sequelize, DataTypes) => {
+module.exports= (sequelize, dataTypes) => {
 
     let alias = "product";
 
     let cols = {
         id:{
-            type:dataTypes.INTEGER(11),
-            allowNull:false, //permite nulo?
+            type: dataTypes.INTEGER(11),
+            allowNull:false,
             autoIncrement: true,
-            primaryKey:true
+            primaryKey:true,
         },
         marca:{
             type:dataTypes.STRING(45),
@@ -31,7 +29,7 @@ module.exports= (sequelize, DataTypes) => {
             allowNull:true,
         },
         descripcion:{
-            type:dataTypes.MEDIUMTEXT(),
+            type:dataTypes.TEXT(),
             allowNull:false
         },
         fotos:{
@@ -39,7 +37,7 @@ module.exports= (sequelize, DataTypes) => {
         },
         categoria_id:{
             type:dataTypes.INTEGER(11)
-        }
+        },
     }
 
     let config = {
@@ -50,8 +48,8 @@ module.exports= (sequelize, DataTypes) => {
 
     const product = sequelize.define(alias, cols, config);
 
-    /*product.associate = function(models){
-        product.belongsTo(models.categories,{ 
+    product.associate = function(models){
+        product.belongsTo(models.categorie,{ 
             as:"categoria",
             foreignKey:"categoria_id"
         })
@@ -60,7 +58,6 @@ module.exports= (sequelize, DataTypes) => {
             as:"compra-producto",
             foreignKey:"id_producto"
         })
-
-    }*/
+    }
     return product;
 }
