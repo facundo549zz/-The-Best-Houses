@@ -1,7 +1,7 @@
 
 module.exports= (sequelize, dataTypes) => {
 
-    let alias = "user";
+    let alias = "User";
 
     let cols = {
         id:{
@@ -38,29 +38,30 @@ module.exports= (sequelize, dataTypes) => {
             type:dataTypes.STRING(100),
             allowNull:false
         },
-        fecha:{
-            type:dataTypes.DATEONLY()
+        fecha_de_nacimiento:{
+            type:dataTypes.DATE()
         },
         imagen:{
             type:dataTypes.STRING(45)
         },
         domicilio:{
             type:dataTypes.STRING(45)
-        },
+        }, 
     }
 
     let config = {
         tableName: "users",
-        timestamps: true,
-        underscored:true
+        timestamps: false,
     }
 
     const user = sequelize.define(alias, cols, config);
 
     user.associate = function(models){
         user.hasMany(models.sale, { 
-            as:"compra-usuario",
-            foreignKey:"id_usuario"
+            as:"usuario-compra",
+            through: "sale-buy", //tabla intermedia
+            foreignKey:"id_producto", //clave foranea de esta tabla
+            otherkey: "id_usuario"
         })
     }
     return user;

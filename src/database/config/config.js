@@ -3,7 +3,7 @@ module.exports = {
   "development": {
     "username": "root", //o prueba
     "password": null,
-    "database": "thebestbikes1",
+    "database": "thebestbikes",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

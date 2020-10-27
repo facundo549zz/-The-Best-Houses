@@ -1,7 +1,7 @@
 
 module.exports= (sequelize, dataTypes) => {
 
-    let alias = "product";
+    let alias = "Product";
 
     let cols = {
         id:{
@@ -26,16 +26,14 @@ module.exports= (sequelize, dataTypes) => {
         },
         color:{
             type:dataTypes.STRING(30),
-            allowNull:true,
         },
         descripcion:{
             type:dataTypes.TEXT(),
-            allowNull:false
         },
         fotos:{
             type:dataTypes.STRING(255)
         },
-        categoria_id:{
+        id_categoria:{
             type:dataTypes.INTEGER(11)
         },
     }
