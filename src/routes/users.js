@@ -17,7 +17,12 @@ router.post('/login',usersController.processLogin);
 router.get('/profile', /*sessionUserCheck,*/ usersController.profile);
 //router.post('/profile', upImageProducts, usersController.Cargar);
 router.get('/login/logout',usersController.logout);
+<<<<<<< HEAD
 
+=======
+router.get('/register', usersController.register);
+router.post('/register',upImageAvatar.any(), logDBMiddleware ,usersController.processRegister);
+>>>>>>> 69c6c15cb19c0f3dd9eae6db060478113259574f
 
 
 
