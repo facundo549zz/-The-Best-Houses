@@ -34,4 +34,21 @@ module.exports = {
             css: "productCart.css"
         })
     },
+
+    upload: function (req, res) {
+        let lastID = productos.length;
+
+        let nuevoProducto = {
+            id: lastID + 1,
+            category: req.body.category,
+            marca: req.body.marcas,
+            name: req.body.name,
+            colors: req.body.colores,
+            price: req.body.price,
+            description: req.body.description,
+            image: req.files[0].filename,
+        };
+        productos.push(nuevoProducto);
+        fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'), JSON.stringify(productos), 'utf-8');
+    },
 }
