@@ -6,7 +6,7 @@
 <body>
     <%- include('partials/header') %>
     <br>
-    <h1 class="login"><%= title %></h1>
+    <h1 class="login ml-3"><%= title %></h1>
     <br>
 
     <div class="divvv">
@@ -14,10 +14,10 @@
         <img src="/images/logo.jpeg" alt="" />
         <form action="" method="POST">
         <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="email">email</label>
+          <div class="mt-2 col-md-6 mb-3">
+            <label for="email">Email</label>
             <input
-              placeholder="email"
+              placeholder="Email"
               type="email"
               class="form-control"
               id="email"
@@ -26,7 +26,7 @@
               value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>"
             />
           </div>
-          <div class="col-md-6 mb-3">
+          <div class="mt-2 col-md-6 mb-3">
             <label for="password">Constraseña</label>
             <input
               placeholder="Constraseña"

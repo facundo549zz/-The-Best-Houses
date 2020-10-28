@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Se ingreso en la página /
 Se ingreso en la página /favicon.ico
 Se ingreso en la página /products
@@ -592,3 +593,5 @@ Se ingreso en la página /users/login
 Se ingreso en la página /favicon.ico
 Se ingreso en la página /users/login
 Se ingreso en la página /favicon.ico
+=======
+>>>>>>> 626ff410da9c831b071942785f4e977aa820851a

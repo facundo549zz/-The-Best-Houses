@@ -15,12 +15,12 @@
   </script>
   <body>
     <%- include('partials/header') %>
-    <h1 class="regis"><%= title %></h1>
+    <h1 class="regis ml-3"><%= title %></h1>
     <div class="divvv">
       <img src="/images/logo.jpeg" alt="" />
       <form method="POST" action="" enctype="multipart/form-data">
         <div class="form-row">
-          <div class="col-md-6 mb-3">
+          <div class="mt-2 col-md-6 mb-3">
             <label for="Nombre">Nombre</label>
             <input
               placeholder="Nombre"
@@ -31,7 +31,7 @@
               value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>" 
             />
           </div>
-          <div class="col-md-6 mb-3">
+          <div class="mt-2 col-md-6 mb-3">
             <label for="Apellido">Apellido</label>
             <input
               placeholder="Apellido"
@@ -43,7 +43,7 @@
             />
           </div>
 
-          <div class="col-md-6 mb-3">
+          <div class="mt-2 col-md-6 mb-3">
             <label for="email">Email</label>
             <input
               placeholder="email"
@@ -55,7 +55,7 @@
               value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>"
             />
           </div>
-          <div class="col-md-6 mb-3">
+          <div class="mt-2 col-md-6 mb-3">
             <label for="password">Contraseña</label>
             <input
               placeholder="Contraseña"
@@ -69,7 +69,7 @@
 
         
        
-          <div class="col-md-6 mb-3">
+          <div class="mt-2 col-md-6 mb-3">
             <label for="fecha">Fecha de Nacimiento (Opcional)</label>
             <input
               placeholder="Fecha de Nacimiento"
@@ -80,7 +80,7 @@
             />
           </div>
         
-              <div class="col-md-6 mb-3">
+              <div class="mt-2 col-md-6 mb-3">
               <div class="custom-file avatar">
               <label class="custom-file-label" for="customFileLang">Imagen de perfil</label>
               <input placeholder="Seleccionar Archivo" type="file" class="form-control" id="customFileLang" lang="es" name="image" multiple/>
@@ -92,7 +92,7 @@
         
 
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
+          <div class="mt-2 col-sm-offset-2 col-sm-10">
             <div class="checkbox">
               <label>
                 <input type="checkbox" /> Acepto los
@@ -106,7 +106,7 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
+          <div class="mt-2 col-sm-offset-2 col-sm-10">
             <button type="submit" class="btn btn-default">Registrar</button>
           </div>
         </div>
