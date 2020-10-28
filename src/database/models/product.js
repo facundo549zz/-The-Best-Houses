@@ -41,18 +41,18 @@ module.exports= (sequelize, dataTypes) => {
     let config = {
         tableName: "products",
         timestamps: true,
-        underscored:true
+        
     }
 
     const product = sequelize.define(alias, cols, config);
 
-    product.associate = function(models){
-        /*product.belongsTo(models.categorie,{ 
+   product.associate = function(models){
+     /*   product.belongsTo(models.categorie,{ 
             as:"categoria",
-            foreignKey:"categoria_id"
-        })*/
+            foreignKey:"id_categoria"
+        })
     
-        /*product.hasMany(models.sale,{ 
+         product.hasMany(models.sale,{ 
             as:"compra-producto",
             foreignKey:"id_producto"
         })*/

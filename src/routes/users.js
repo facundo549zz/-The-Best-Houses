@@ -14,11 +14,10 @@ router.get('/register', usersController.register);
 router.post('/register',upImageAvatar.any(),usersController.processRegister);
 router.get('/login', usersController.login);
 router.post('/login',usersController.processLogin);
-router.get('/profile', /*sessionUserCheck,*/ usersController.profile);
-//router.post('/profile', upImageProducts, usersController.Cargar);
-router.get('/login/logout',usersController.logout);
-router.get('/register', usersController.register);
-router.post('/register',upImageAvatar.any(), logDBMiddleware ,usersController.processRegister);
+router.get('/profile',upImageAvatar.any() ,usersController.profile);
+
+router.get('/logout',usersController.logout);
+router.delete('/delete/:id',usersController.delete)
 
 
 
