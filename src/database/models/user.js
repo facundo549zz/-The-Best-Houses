@@ -57,12 +57,12 @@ module.exports= (sequelize, dataTypes) => {
     const user = sequelize.define(alias, cols, config);
 
     user.associate = function(models){
-        user.hasMany(models.sale, { 
+        /*user.hasMany(models.sale, { 
             as:"usuario-compra",
             through: "sale-buy", //tabla intermedia
             foreignKey:"id_producto", //clave foranea de esta tabla
             otherkey: "id_usuario"
-        })
+        })*/
     }
     return user;
 }
