@@ -1,46 +1,34 @@
-/*const {check,validatorResult,body} = require('express-validator');
+const {check,validatorResult,body} = require('express-validator');
 const bcrypt = require('bcrypt');
-const usuarios = require('../data/usuarios');
+const db = require('../database/models')
 
 module.exports = [
     check('email')
     .isEmail()
     .withMessage('Debes ingresar un email válido'),
 
-    check('password')
-    .isLength(1)
-    .withMessage('Debes ingresar una contraseña'),
-
-    body('email')
-    .custom(function(value){
-        let usuario = usuarios.filter(user=>{ //filtro la base de datos y asigno el resultado a una varaible
-          return user.email == value //aplico la condición si coincide el mail que el usuario ingresó en el imput con que está registrado
-        })
-        
-        if(usuario == false){ //si no hay resultados
-            return false //la validación retorna false, es decir NO PASO LA VALIDACIÓN
-        }else{
-            return true //la valiación retorna true, es decir VALIDÓ CORRECTAMENTE
-        }
+    check('pass')
+    .isLength({
+        min:1
     })
-    .withMessage('El usuario no está registrado'), //mensaje de error
+    .withMessage('Escribe tu contraseña'),
+    
 
-    body('password')
+    body('pass')
     .custom((value,{req})=>{
-        let result = true;
-        usuarios.forEach(user => {
-            if(user.email == req.body.email){
-                if(!bcrypt.compareSync(value,user.pass)){
-                    result = false
-                }
+       
+        return db.User.findOne({
+            where:{
+                email:req.body.email
             }
-        });
-        if(result == false){
-            return false
-        }else{
-            return true
-        }
+        })
+        .then(user => {
+            if(!bcrypt.compareSync(value,user.dataValues.password)){ 
+                return Promise.reject('estas mal')
+            }
+        })
+        .catch(() => {
+            return Promise.reject('Credenciales inválidas')
+        })
     })
-    .withMessage("Contraseña incorrecta")
-
-]*/
+]

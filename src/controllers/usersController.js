@@ -22,16 +22,13 @@ module.exports = {
             email: req.body.email.trim(),
             password: bcrypt.hashSync(req.body.password.trim(),10),
             imagen: (req.files[0])?req.files[0].filename:"default.png",
+            rol:'user',
         })
         .then(result => {
             console.log(result)
             return res.redirect('/users/login')
         })
-        .catch(errores =>{
-            console.log(errores) 
-            return res.redirect('/users/register')
-        })
-       
+        .catch(errores => res.send(errores))
      },
     
      login: function (req, res) {
@@ -42,8 +39,10 @@ module.exports = {
         })
     },
     processLogin: function (req, res) {
-   
-        db.Users.findOne({
+        let errors = validationResult(req)
+        res.send(errors)
+        if(errors.isEmpty()){
+        db.User.findOne({
             where: {
                 email:req.body.email
             }
@@ -55,40 +54,22 @@ module.exports = {
                 email: user.email,
                 imagen: user.imagen
             }
-            res.locals.user = req.session.user;
-            return res.redirect('/users/profile')
+            return res.redirect('/')
         })
-          /*  usuarios.forEach(usuario => {
-            if (usuario.email == req.body.email) {
-                req.session.usuario = {
-                    id: usuario.id,
-                    nick: usuario.nombre + " " + usuario.apellido,
-                    email: usuario.email,
-                    image: usuario.image
-                }
-           if (req.body.recordar) {
-                    res.cookie('userTheBestBikes', req.session.usuario, {
-                        maxAge: 1000 * 60 * 2
-                    })
-                }
-                res.redirect('/profile')
-            } else {
-                res.render('login', {
-                    title: "Ingresá a tu cuenta",
-                    css: "login.css",
-                    old: req.body,
-                    usuario: req.session.usuario
-                })
-            }
-        });*/
-
+        .catch(errores => res.send(errores))
+        }else{
+            res.render('login', {
+                title: "Ingresa a tu cuenta",
+                css: "login.css",
+                usuario: req.session.user,
+                errors : errors.mapped(), 
+                old : req.body
+            })
+        }
     },
     profile: function (req, res) {
         res.render('userProfile', {
             title: "Perfil de usuario",
-           /* productos: productos.filter(producto => {
-                return producto.category != "todosLosProductos" && producto.category != "montaña" && producto.category != "infantil" && producto.category != "ruta" && producto.category != "BMX" && producto.category != "urbana"
-            }),*/
             css: "profile.css",
             usuario: req.session.user
         })

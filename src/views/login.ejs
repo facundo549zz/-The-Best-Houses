@@ -21,10 +21,11 @@
               type="email"
               class="form-control"
               id="email"
-              required
               email="email"
               value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>"
             />
+            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
+
           </div>
           <div class="mt-2 col-md-6 mb-3">
             <label for="password">Constraseña</label>
@@ -36,6 +37,7 @@
               name="pass"
               id="password"
             />
+            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
           </div>
         </div>
 
