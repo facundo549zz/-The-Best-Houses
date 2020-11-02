@@ -23,6 +23,7 @@
               id="email"
               email="email"
               value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>"
+              name="email"
             />
             <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
 
@@ -34,10 +35,10 @@
               type="password"
               class="form-control"
               password="password"
-              name="pass"
+              name="password"
               id="password"
             />
-            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
+            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.password)?errors.password.msg: "" %> </small>
           </div>
         </div>
 

@@ -21,6 +21,7 @@ module.exports = {
             apellido : req.body.apellido.trim(),
             email: req.body.email.trim(),
             password: bcrypt.hashSync(req.body.password.trim(),10),
+            fecha_de_nacimiento: req.body.fecha_de_nacimiento.trim(),
             imagen: (req.files[0])?req.files[0].filename:"default.png",
             rol:'user',
         })
@@ -28,18 +29,17 @@ module.exports = {
             console.log(result)
             return res.redirect('/users/login')
         })
-        .catch(errores => res.send(errores))
+        .catch(error => console.log(error))
      },
     
      login: function (req, res) {
         res.render('login', {
             title: "Ingresa a tu cuenta",
             css: "login.css",
-            usuario: req.session.user
         })
     },
     processLogin: function (req, res) {
-        let errors = validationResult(req)
+        let errors = validationResult(req);
         res.send(errors)
         if(errors.isEmpty()){
         db.User.findOne({
@@ -50,22 +50,25 @@ module.exports = {
         .then(user => {
             req.session.user = {
                 id: user.id,
-                nick: user.nombre + "" + user.apellido,
+               nombre: user.nombre,
+                apellido: user.apellido,
                 email: user.email,
-                imagen: user.imagen
+                imagen: user.imagen,
+                rol:user.rol
             }
-            return res.redirect('/')
+                return res.redirect('/')
         })
-        .catch(errores => res.send(errores))
+        .catch(error => res.send(error))
         }else{
             res.render('login', {
                 title: "Ingresa a tu cuenta",
                 css: "login.css",
-                usuario: req.session.user,
                 errors : errors.mapped(), 
                 old : req.body
             })
         }
+        
+        
     },
     profile: function (req, res) {
         res.render('userProfile', {

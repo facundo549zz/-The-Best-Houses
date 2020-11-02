@@ -9,12 +9,12 @@
       <div class="row">
         <div class="col-6 col-md-3 todosLosProductos">
           <section>
-            <% listadoDeProductos.forEach(producto =>{ %>
+            <% product.forEach(producto =>{ %>
             <div class="prd ml-2">
-              <%= producto.marca %> <%= producto.name %> <br />
-              $<%= producto.price %>
+              <%= producto.marca %> <%= producto.nombre %> <br />
+              $<%= producto.precio %>
               <a href="/products/<%= producto.id %>">
-              <img src="../public/images/bici/<%=producto.image %>" alt=""/></a>
+              <img src="../public/images/bici/<%=producto.fotos %>" alt=""/></a>
             </div>
             <% }) %>
           </section>
