@@ -21,6 +21,7 @@ module.exports = {
             apellido : req.body.apellido.trim(),
             email: req.body.email.trim(),
             password: bcrypt.hashSync(req.body.password.trim(),10),
+            //fecha_de_nacimiento: req.date.fecha_de_nacimiento.trim(),
             imagen: (req.files[0])?req.files[0].filename:"default.png",
             rol:'user',
         })
