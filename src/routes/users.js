@@ -14,10 +14,10 @@ const loginValidator = require('../validations/loginValidator')
 router.get('/register', usersController.register);
 router.post('/register',upImageAvatar.any(),usersController.processRegister);
 router.get('/login', usersController.login);
-router.post('/login',usersController.processLogin);
+router.post('/login', loginValidator, usersController.processLogin);
 router.get('/profile',upImageAvatar.any() ,usersController.profile);
 router.get('/logout',usersController.logout);
-router.delete('/delete/:id',usersController.delete)
+router.delete('/delete/:id',usersController.delete);
 
 
 

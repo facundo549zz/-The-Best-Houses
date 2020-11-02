@@ -1,12 +1,16 @@
 const path = require('path');
 const fs = require('fs');
 const productos = require('../data/products.json');
+const db = require('../database/models');
 
 module.exports = {
     listado: function(req,res){
-        res.render('products',{
-            css:'products.css',
-            listadoDeProductos : productos
+        db.Product.findAll()
+        .then(product => {
+            res.render('products',{
+                title : "Listado de Productos",
+                productos : product
+            })
         })
     },
     detailProducto:(req ,res)=>{
@@ -22,6 +26,7 @@ module.exports = {
 
         })
     },
+    
     addController:function(req,res){
         res.render('productAdd',{
             title: "Detalle del Producto",
@@ -34,7 +39,21 @@ module.exports = {
             css: "productCart.css"
         })
     },
-
+    search: function(req, res) {
+  
+        db.Product.findAll()
+        .then(result => {
+         res.render('products', {
+             title: "Resultado de la búsqueda",
+             productos: result,
+             css:'index.css'
+         })
+        })
+        .catch(error => {
+            res.send(error)
+        })
+         
+     },
     upload: function (req, res) {
         let lastID = productos.length;
 
