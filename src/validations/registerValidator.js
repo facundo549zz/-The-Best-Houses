@@ -1,4 +1,4 @@
-/*let usuarios = require('../data/usuarios');
+let usuarios = require('../data/usuarios');
 
 let db = require('../database/models')
 
@@ -42,7 +42,7 @@ module.exports = [
     })
     .withMessage("Debes ingresar una contraseña entre 6 y 12 caracteres"),
 
-    /*check('bases')
+    check('bases')
     .isString("on")
     .withMessage("Debe aceptar las bases y condiciones"),
 
@@ -62,4 +62,4 @@ module.exports = [
             return true
         }
     }).withMessage("Tenés que subir una imagen")
-]*/
+]

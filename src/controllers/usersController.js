@@ -15,7 +15,8 @@ module.exports = {
         })
     },
     processRegister:function(req,res){
-
+        let errors = validationResult(req)
+        errors
         db.User.create({
             nombre : req.body.nombre.trim(),
             apellido : req.body.apellido.trim(),
@@ -82,7 +83,7 @@ module.exports = {
                 maxAge: -1
             })
         }
-        return res.redirect('/users/login')
+        return res.redirect('/')
     },
     delete: function (req,res) {
         
