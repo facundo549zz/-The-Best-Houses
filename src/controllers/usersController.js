@@ -1,5 +1,5 @@
 //const usuarios = require('../data/usuarios');
-const productos = require('../data/products');
+//const productos = require('../data/products');
 const db = require('../database/models');
 const {validationResult} = require('express-validator');
 
@@ -15,13 +15,14 @@ module.exports = {
         })
     },
     processRegister:function(req,res){
-
+        let errors = validationResult(req)
+        errors
         db.User.create({
             nombre : req.body.nombre.trim(),
             apellido : req.body.apellido.trim(),
             email: req.body.email.trim(),
             password: bcrypt.hashSync(req.body.password.trim(),10),
-            fecha_de_nacimiento: req.body.fecha_de_nacimiento.trim(),
+            //fecha_de_nacimiento: req.body.fecha_de_nacimiento.trim(),
             imagen: (req.files[0])?req.files[0].filename:"default.png",
             rol:'user',
         })
@@ -47,10 +48,9 @@ module.exports = {
             }
         })
         .then(user => {
-            req.session.usario = {
+            req.session.usuario = {
                 id: user.id,
-               nombre: user.nombre,
-                apellido: user.apellido,
+                nick: user.nombre + " " + user.apellido,
                 email: user.email,
                 imagen: user.imagen,
                 rol:user.rol
@@ -73,13 +73,13 @@ module.exports = {
         res.render('userProfile', {
             title: "Perfil de usuario",
             css: "profile.css",
-            usuario: req.session.usario
+            usuario: req.session.usuario
         })
     },
     logout: function (req, res) {
         req.session.destroy();
         if (req.cookies.userTheBestBikes) {
-            res.cookie('userTheBestBikes', '', {
+            res.cookie('userTheBestBikes', ' ', {
                 maxAge: -1
             })
         }
