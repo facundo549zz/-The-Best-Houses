@@ -40,7 +40,6 @@ module.exports = {
     },
     processLogin: function (req, res) {
         let errors = validationResult(req);
-        res.send(errors)
         if(errors.isEmpty()){
         db.User.findOne({
             where: {
@@ -48,7 +47,7 @@ module.exports = {
             }
         })
         .then(user => {
-            req.session.user = {
+            req.session.usario = {
                 id: user.id,
                nombre: user.nombre,
                 apellido: user.apellido,
@@ -74,7 +73,7 @@ module.exports = {
         res.render('userProfile', {
             title: "Perfil de usuario",
             css: "profile.css",
-            usuario: req.session.user
+            usuario: req.session.usario
         })
     },
     logout: function (req, res) {
