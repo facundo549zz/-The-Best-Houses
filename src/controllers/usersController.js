@@ -87,10 +87,9 @@ module.exports = {
 
         }
         db.User.update(
-            req.session.usuario =
             {
-                nombre : req.session.usuario.nombre,
-                apellido : req.session.usuario.apellido,
+                nombre : req.body.nombre.trim(),
+                apellido : req.body.apellido,
                 fecha_de_nacimiento: req.body.fecha_de_nacimiento,
                 imagen:(req.files[0])?req.files[0].filename:req.session.usuario.imagen,
                 domicilio: req.body.domicilio.trim(),
