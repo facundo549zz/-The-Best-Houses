@@ -1,1 +1,16 @@
 @import "style.css";
+
+.imgProfile{
+    width: 372px;
+    margin-top: 40px;
+    margin-left: -73px;
+}
+.btnBaja{
+    width: 150px;
+    margin-right: 140px;
+}
+@media(min-width: 768px){
+    .btnBaja{
+        margin-right: 15px;
+    }   
+}
