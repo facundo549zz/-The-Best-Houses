@@ -5,7 +5,8 @@ Estamos dedicados a brindarte la mayor experiencia en bicicleta, ya sea como med
 
 Integrantes: Somos tres jóvenes apasionados por las bicicletas, y todo lo relacionado a ellas. Por eso queremos brindar soluciones y todo nuestro conocimiento a aquellas personas que deseen adentrarse en el mundo del ciclismo, compartan esta misma pasión o simplemente estén buscando información eficaz y personalizada sobre algún producto. Este proyecto nació en la localidad de San Miguel, a la cual pertenecemos, a raíz no solo de lo que nos gusta, sino también de ver que las personas utilizaban cada vez más su bicicleta como medio de transporte, debido a los colectivos repletos o bien implementándola como deporte. Sin embargo, la calidad de las bicicletas que rondan por las calles de San Miguel no son de las mejores y están sobre valoradas por su elevado precio y su poca calidad. Por eso es que decidimos hacer realidad este proyecto brindando la mejor atención y calidad al menor precio del mercado.
 
-                                   Patricio Martinez (19) - Alejandro Guaymás (29) - Facundo Ferreyra (20)
+                                   Patricio Martinez (19) - Alejandro Guaymás (29) - Facundo Ferreyra (20) - 
+                                   Jorge Alarcia (30)
 
 ### Referentes de Mercado
 
