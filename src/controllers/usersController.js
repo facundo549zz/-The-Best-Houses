@@ -72,11 +72,22 @@ module.exports = {
 
     },
     profile: function (req, res) {
-        res.render('userProfile', {
-            title: "Perfil de usuario",
-            css: "profile.css",
-            usuario: req.session.usuario
+        db.User.findOne({
+            where:{
+                id:req.session.usuario.id
+            }
         })
+        .then(usuario => {
+                res.render('userProfile', {
+                    title: "Perfil de usuario",
+                    css: "profile.css",
+                    usuario: usuario
+                })
+            })
+            .catch(errors => {
+               return res.send(errors)
+            })
+        
     },
     updateProfile: function(req,res){
         if(req.files[0]){
@@ -87,11 +98,10 @@ module.exports = {
 
         }
         db.User.update(
-            req.session.usuario =
             {
-                nombre : req.session.usuario.nombre,
-                apellido : req.session.usuario.apellido,
-                fecha_de_nacimiento: req.body.fecha_de_nacimiento,
+                nombre : req.body.nombre,
+                apellido : req.body.apellido,
+                fecha_de_nacimiento: req.body.fechaDeNacimiento,
                 imagen:(req.files[0])?req.files[0].filename:req.session.usuario.imagen,
                 domicilio: req.body.domicilio.trim(),
             },
