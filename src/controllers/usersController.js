@@ -24,7 +24,7 @@ module.exports = {
                 apellido: req.body.apellido.trim(),
                 email: req.body.email.trim(),
                 password: bcrypt.hashSync(req.body.password.trim(), 10),
-                //fecha_de_nacimiento: req.body.fecha_de_nacimiento.trim(),
+                fecha_de_nacimiento: req.body.fechaDeNacimiento.trim(),
                 imagen: (req.files[0]) ? req.files[0].filename : "default.png",
                 rol: 'user',
             })
@@ -72,11 +72,22 @@ module.exports = {
 
     },
     profile: function (req, res) {
-        res.render('userProfile', {
-            title: "Perfil de usuario",
-            css: "profile.css",
-            usuario: req.session.usuario
+        db.User.findOne({
+            where:{
+                id:req.session.usuario.id
+            }
         })
+        .then(usuario => {
+                res.render('userProfile', {
+                    title: "Perfil de usuario",
+                    css: "profile.css",
+                    usuario: usuario
+                })
+            })
+            .catch(errors => {
+               return res.send(errors)
+            })
+        
     },
     updateProfile: function(req,res){
         if(req.files[0]){
@@ -88,9 +99,9 @@ module.exports = {
         }
         db.User.update(
             {
-                nombre : req.body.nombre.trim(),
+                nombre : req.body.nombre,
                 apellido : req.body.apellido,
-                fecha_de_nacimiento: req.body.fecha_de_nacimiento,
+                fecha_de_nacimiento: req.body.fechaDeNacimiento,
                 imagen:(req.files[0])?req.files[0].filename:req.session.usuario.imagen,
                 domicilio: req.body.domicilio.trim(),
             },
@@ -119,7 +130,15 @@ module.exports = {
         return res.redirect('/')
     },
     delete: function (req, res) {
-
+        db.User.destroy({
+            where : {
+                id : req.params.id
+            }
+        })
+        .then( () => {
+            req.session.destroy();
+            res.redirect('/')
+        })
     }
 
 }
