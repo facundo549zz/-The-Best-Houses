@@ -4,3 +4,150 @@
     border-bottom: solid 1px rgb(122, 122, 122);
     padding-bottom: 10px;
 }
+
+.cartTitle h1 {
+    border: 2px solid black;
+    margin-top: 5px;
+}
+
+/* Tables
+================================== */
+.Rtable {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 3em 0;
+    padding: 0;
+    text-align: center;
+}
+
+.Rtable-cell {
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0.8em 1.2em;
+    overflow: hidden;
+    list-style: none;
+    border: solid 3px white;
+    background: rgba(112, 128, 144, 0.2);
+}
+
+/*Table column sizing
+  ================================== */
+.Rtable--2cols>.Rtable-cell {
+    width: 50%;
+}
+
+.Rtable--3cols>.Rtable-cell {
+    width: 33.33%;
+}
+
+.Rtable--4cols>.Rtable-cell {
+    width: 25%;
+}
+
+.Rtable--5cols>.Rtable-cell {
+    width: 20%;
+}
+
+
+/* Page styling
+  ================================== */
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans&display=swap');
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans&display=swap');
+}
+
+html {
+    height: 100%;
+    background-color: #EEE;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 2em;
+    max-width: 800px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em;
+    background-color: #dbdbdb;
+    border: double 3px #DDD;
+    border-top: none;
+    border-bottom: none;
+}
+
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+strong {
+    color: #dbdbdb;;
+}
+
+/* Apply styles
+  ================================== */
+.Rtable {
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+
+.Rtable-cell {
+    margin: -3px 0 0 -3px;
+    background-color: white;
+    border-color: #e2e6e9;
+}
+
+/* Cell styles
+  ================================== */
+
+
+
+.Rtable-cell {
+    background-color: #dbdbdb;
+    border-color: #a9b3bc;
+}
+
+/* Responsive
+  ==================================== */
+@media all and (max-width: 500px) {
+    .Rtable--collapse {
+        display: block;
+    }
+
+    .Rtable--collapse>.Rtable-cell {
+        width: 100% !important;
+    }
+
+    .Rtable--collapse>.Rtable-cell--foot {
+        margin-bottom: 1em;
+    }
+}
+
+.no-flexbox .Rtable {
+    display: block;
+}
+
+.no-flexbox .Rtable>.Rtable-cell {
+    width: 100%;
+}
+
+.no-flexbox .Rtable>.Rtable-cell--foot {
+    margin-bottom: 1em;
+}
