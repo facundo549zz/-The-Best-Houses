@@ -78,6 +78,38 @@ module.exports = {
             usuario: req.session.usuario
         })
     },
+    updateProfile: function(req,res){
+        if(req.files[0]){
+            if(fs.existsSync(path.join(__dirname,'../../public/images/users/'+req.session.usuario.imagen))){
+                fs.unlinkSync(path.join(__dirname,'../../public/images/users/'+req.session.usuario.imagen))
+                res.locals.usuario.imagen = req.files[0].filename
+            }
+
+        }
+        db.User.update(
+            req.session.usuario =
+            {
+                nombre : req.session.usuario.nombre,
+                apellido : req.session.usuario.apellido,
+                fecha_de_nacimiento: req.body.fecha_de_nacimiento,
+                imagen:(req.files[0])?req.files[0].filename:req.session.usuario.imagen,
+                domicilio: req.body.domicilio.trim(),
+            },
+            {
+                where:{
+                    id:req.params.id
+                }
+            }
+        )
+        .then( result => {
+          console.log(req.session.usuario)
+
+          return res.redirect('/users/profile')
+          })
+        .catch(err => {
+            console.log(err)
+        })
+    },
     logout: function (req, res) {
         req.session.destroy();
         if (req.cookies.userTheBestBikes) {

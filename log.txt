@@ -761,6 +761,38 @@ Se ingreso en la página /favicon.ico
 Se ingreso en la página /
 Se ingreso en la página /favicon.ico
 Se ingreso en la página /favicon.ico
+<<<<<<< HEAD
+Se ingreso en la página /users/login
+Se ingreso en la página /favicon.ico
+Se ingreso en la página /users/login
+Se ingreso en la página /
+Se ingreso en la página /favicon.ico
+Se ingreso en la página /users/profile
+Se ingreso en la página /favicon.ico
+Se ingreso en la página /favicon.ico
+Se ingreso en la página /users/logout
+Se ingreso en la página /
+Se ingreso en la página /favicon.ico
+Se ingreso en la página /users/profile
+Se ingreso en la página /users/login
+Se ingreso en la página /favicon.ico
+Se ingreso en la página /users/login
+Se ingreso en la página /
+Se ingreso en la página /favicon.ico
+Se ingreso en la página /users/profile
+Se ingreso en la página /users/profile
+Se ingreso en la página /users/profile
+Se ingreso en la página /users/login
+Se ingreso en la página /favicon.ico
+Se ingreso en la página /users/login
+Se ingreso en la página /
+Se ingreso en la página /favicon.ico
+Se ingreso en la página /users/profile
+Se ingreso en la página /users/profile
+Se ingreso en la página /users/profile
+Se ingreso en la página /users/profile
+=======
+>>>>>>> 3d3f6b79cb54b3e3e006118e5caca918061de755
 Se ingreso en la página /
 Se ingreso en la página /favicon.ico
 Se ingreso en la página /products/cart

@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-6 col-md-3 todosLosProductos">
           <section>
-            <% Product.forEach(producto =>{ %>
+            <% producto.forEach(producto =>{ %>
             <div class="prd ml-2">
               <%= producto.marca %> <%= producto.nombre %> <br />
               $<%= producto.precio %>
