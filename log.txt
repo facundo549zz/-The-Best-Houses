@@ -761,3 +761,7 @@ Se ingreso en la página /favicon.ico
 Se ingreso en la página /
 Se ingreso en la página /favicon.ico
 Se ingreso en la página /favicon.ico
+Se ingreso en la página /
+Se ingreso en la página /favicon.ico
+Se ingreso en la página /products/cart
+Se ingreso en la página /favicon.ico

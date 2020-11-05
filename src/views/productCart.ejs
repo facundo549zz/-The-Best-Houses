@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 
-  <%- include('partials/head') %> 
+<%- include('partials/head') %>
 
 <body>
   <%- include('partials/header') %>
-    
-    <div>
-      <h2 class="cart mb-5 mt-3 ml-3">MI CARRITO</h2>
-      <h3 class="ml-3">Tu carrito esta vacio</h4>
-      <a href="/products" class="ml-3">¿Querés agregar un producto? haz click aquí</a>
-    </div>  
-      <%- include('partials/footer') %>
+
+  <div>
+    <h2 class="cart mb-5 mt-3 ml-3">MI CARRITO</h2>
+    <h3 class="ml-3">Tu carrito esta vacio</h4>
+      <a href="/src/views/products.ejs" class="ml-3">¿Querés agregar un producto? haz click aquí</a>
+
+      <div class="Rtable Rtable--5cols Rtable--collapse">
+
+        <div style="order:0;" class="Rtable-cell Rtable-cell--head">
+          <h3>Producto</h3>
+        </div>
+        <div style="order:1;" class="Rtable-cell">
+          <h3>Precio</h3>
+        </div>
+        <div style="order:2;" class="Rtable-cell">
+          <h3>Cantidad</h3>
+        </div>
+        <div style="order:3;" class="Rtable-cell">
+          <h3>Total</h3>
+        </div>
+        <div style="order:4;" class="Rtable-cell Rtable-cell--foot">
+          <h3>Pagar</h3>
+          <button type="button" class="btn btn-primary">pagar</button>
+        </div>
+        
+      </div>
+      <h5 class="eliminar">Eliminar orden</h5>
+        <button class="btn btn-danger" >
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+            </svg>
+  </div>
+  <%- include('partials/footer') %>
 </body>
+
 </html>
