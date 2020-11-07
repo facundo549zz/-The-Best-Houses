@@ -9,8 +9,12 @@ module.exports = {
         .then(product => {
             res.render('products',{
                 title : "Listado de Productos",
-                productos : product
+                productos : product,
+                css: "products.css"
             })
+        })
+        .catch(err =>{
+            res.send(err)
         })
     },
     detailProducto:(req ,res)=>{
