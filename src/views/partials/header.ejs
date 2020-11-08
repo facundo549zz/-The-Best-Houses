@@ -36,7 +36,11 @@
               <li><a href="">Arma tu Bicicleta</a></li>
               <li><a href="">Accesorios</a></li>
               <li><a href="">Respuestos</a></li>
-              <li><a href="/store/register">Administrador</a></li>
+              <% if (typeof user != "undefined" && user.rol != "user") { %>
+              <li><a href="/users/profile">Administracion</a></li>
+              <% } else{ %>
+              <li><a href="/store/register">administrador</a></li>
+              <% } %>
             </ul>
           </div>
         </nav>
@@ -67,7 +71,7 @@
         </form>
       </div>
       <% } else{ %>
-        <a href="/users/logout">Cerrar sesión <i class="fas fa-sign-in-alt ml-3"></i></a>
+        <a href="/users/logout" class="cerrarSesion">Cerrar sesión<i class="fas fa-sign-in-alt ml-3"></i></a>
         <% } %>
 
 
