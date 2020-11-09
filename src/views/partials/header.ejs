@@ -36,8 +36,8 @@
               <li><a href="">Arma tu Bicicleta</a></li>
               <li><a href="">Accesorios</a></li>
               <li><a href="">Respuestos</a></li>
-              <% if (typeof user != "undefined" && user.rol != "user") { %>
-              <li><a href="/users/profile">Administracion</a></li>
+              <% if (typeof usuario != "undefined" && usuario.rol == "admin") { %>
+              <li><a href="/products/add">Administracion</a></li>
               <% } else{ %>
               <li><a href="/store/register">administrador</a></li>
               <% } %>
