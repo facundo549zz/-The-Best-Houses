@@ -12,6 +12,7 @@ var logMiddlewares = require('./middlewares/logMiddlewares');
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/products');
 var usersRouter= require('./routes/users');
+var storeRouter = require('./routes/store');
 
 
 var app = express();
@@ -32,6 +33,7 @@ app.use(session({secret:"TheBestBikes"}));
 app.use(localsCheck);
 
 app.use('/', indexRouter);
+app.use('/store', storeRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 

@@ -83,15 +83,18 @@
     .icono2,.icono3 {
       margin-left: 0px;
     }
+    header button.icono1{
+      margin-left: 87px;
+    }
     header form .icono1 {
       position: relative;
-      left: 30px;
+      left: -38px;
       height: 30px;
     }
   
     header form .icono2 {
       position: relative;
-      left: 10px;
+      left: 20px;
       height: 30px;
     }
     header form .icono3 {
@@ -106,7 +109,10 @@
       margin-top: -15px;
       left: -13px;
     }
-    
+    .cerrarSesion{
+      margin-left: 15px;
+   
+    }
   }
   
   @media(min-width: 1024px) {
@@ -132,7 +138,9 @@
       left: 225px;
       height: 30px;
     }
-  
+    header button.icono1{
+      margin-left: 0px;
+    }
     header form .icono1 {
       position: relative;
       left: 0px;
@@ -149,6 +157,9 @@
       left: -55px;
       height: 30px;
     }
+    header .avatar{
+      left: -35px;
+    }
     header .avatar .mr-2{
       font-size: 20px;
     }
@@ -156,6 +167,11 @@
       width: 40px;
       height: 40px;
       margin-top: -11px;
+      margin-right: -39px;
+    }
+    .cerrarSesion{
+      margin-left: -25px;
+    margin-right: 45px;
     }
   }
   

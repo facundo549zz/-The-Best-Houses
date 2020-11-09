@@ -43,7 +43,7 @@
                 <div class="tab-pane fade show active p-4" id="datos" role="tabpanel" aria-labelledby="home-tab">
                   <form action="/users/updateProfile/<%= usuario.id %> ?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="form-row">
-                      <div class="col-12 col-md-4 mt-3 d-flex flex-column align-items-center">
+                      <div class="col-12 col-md-5 mt-3 d-flex flex-column align-items-center">
                       
                           <img src="/images/users/<%= usuario.imagen %> " class="avatarImg" alt="avatar"width="75%" style="object-fit: cover; object-position: top;">
                       
@@ -51,7 +51,7 @@
                           <input type="file" class="form-control imgProfile" id="imagenImput" name="imagen">
                         </div>
                       </div>
-                      <div class="col-12 col-md-8 ">
+                      <div class="col-12 col-md-7 ">
                         <div class="form-row mt-2">
                           <div class="form-group col-12 col-md-6 ">
                             <label for="inputNombre">Nombre</label>
