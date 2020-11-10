@@ -3,7 +3,6 @@ const fs = require('fs');
 //const productos = require('../data/products.json');
 const db = require('../database/models');
 const Sequelize = require('sequelize');
-const { sequelize } = require('../database/models');
 const op = Sequelize.Op
 module.exports = {
     listado: function(req,res){
@@ -31,7 +30,8 @@ module.exports = {
         .then(bicicleta =>{
             db.product.findAll({
                 where:{
-                    id_categoria: bicicleta.categoria.id                }
+                    id_categoria: bicicleta.categoria.id 
+                }
             })
         })
         .then(bicicletas =>{  
