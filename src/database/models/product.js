@@ -15,6 +15,9 @@ module.exports= (sequelize, dataTypes) => {
             allowNull:false,
             
         },
+        rodado:{
+            type: dataTypes.INTEGER(11)
+        },
         nombre:{
             type:dataTypes.STRING(100),
             allowNull:false,
@@ -40,7 +43,7 @@ module.exports= (sequelize, dataTypes) => {
 
     let config = {
         tableName: "products",
-        timestamps: true,
+        timestamps: false,
         
     }
 

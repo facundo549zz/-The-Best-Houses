@@ -1,41 +1,59 @@
 const path = require('path');
 const fs = require('fs');
-const productos = require('../data/products.json');
+//const productos = require('../data/products.json');
 const db = require('../database/models');
-
+const Sequelize = require('sequelize');
+const { sequelize } = require('../database/models');
+const op = Sequelize.Op
 module.exports = {
     listado: function(req,res){
         db.Product.findAll()
-        .then(product => {
+        .then(productos => {
             res.render('products',{
                 title : "Listado de Productos",
-                productos : product,
+                productos : productos,
                 css: "products.css"
             })
         })
-        .catch(err =>{
-            res.send(err)
+        .catch(error =>{
+            res.send(error)
         })
     },
     detailProducto:(req ,res)=>{
         let id = req.params.id;
-        let producto = productos.filter(producto => {
-            return producto.id == id
+       db.Product.findByPk(id,{ 
+            include : [
+                {
+                    asociation : 'categoria'
+                },
+            ]
         })
+        .then(bicicleta =>{
+            db.product.findAll({
+                where:{
+                    id_categoria: bicicleta.categoria.id                }
+            })
+        })
+        .then(bicicletas =>{  
         res.render('productDetail', {
             title: "Detalle del Producto",
-            id: id,
-            producto: producto[0],
+            producto: bicicleta.categoria,
+            bicicletas: bicicletas,
             css:"productDetail.css",
-
+        })
         })
     },
     
     addController:function(req,res){
-        res.render('productAdd',{
-            title: "Detalle del Producto",
-            css: "productAdd.css"
+        db.Categorie.findAll()
+        .then(categorias=>{
+            res.render('productAdd',{
+                title: "Agregar Producto",
+                categorias: categorias,
+                css: "productAdd.css"
+            })
         })
+        
     },
     carritoController:function(req,res){
         res.render('productCart',{
@@ -45,12 +63,19 @@ module.exports = {
     },
     search: function(req, res) {
   
-        db.Product.findAll()
-        .then(result => {
+        db.Product.findAll({
+            where : {
+                nombre : {
+                    [op.substring] : req.body.search
+                }
+            }
+
+        })
+        .then(bicicletas => {
          res.render('products', {
              title: "Resultado de la búsqueda",
-             productos: result,
-             css:'index.css'
+             productos: bicicletas,
+             css:'products.css'
          })
         })
         .catch(error => {
