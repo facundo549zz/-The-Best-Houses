@@ -3,23 +3,14 @@
 
   <%- include('partials/head') %> 
   
-  <script src="/javascripts/userRegister.js"></script>
-  <script>
-    function myFunction() {
-      var x = document.getElementById("inputPassword3");
-      if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
-      }
-    }
-  </script>
+ 
+  
   <body>
     <%- include('partials/header') %>
     <h1 class="regis ml-3"><%= title %></h1>
     <div class="divvv">
       <img src="/images/logo.jpeg" alt="" />
-      <form method="POST" action="" enctype="multipart/form-data">
+      <form method="POST" action="" enctype="multipart/form-data" id="register">
         <div class="form-row">
           <div class="mt-2 col-md-6 mb-3">
             <label for="Nombre">Nombre</label>
@@ -27,7 +18,7 @@
               placeholder="Nombre"
               type="text"
               class="form-control"
-              id="Nombre"
+              id="nombre"
               name="nombre"
               value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>" 
             />
@@ -39,7 +30,7 @@
               placeholder="Apellido"
               type="text"
               class="form-control"
-              id="Apellido"
+              id="apellido"
               name="apellido"
               value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>" 
             />
@@ -116,5 +107,16 @@
       </form>
     </div>
     <%- include('partials/footer') %>
+    <script src="/javascripts/userRegister.js"></script>
+    <script>
+      /* function myFunction() {
+         var x = document.getElementById("inputPassword3");
+         if (x.type === "password") {
+           x.type = "text";
+         } else {
+           x.type = "password";
+         }
+       }*/
+     </script>
   </body>
 </html>
