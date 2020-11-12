@@ -10,6 +10,9 @@ router.get('/add',productsController.addController);
 router.post('/add',productsController.upload);
 router.get('/detalle/:id', productsController.detailProducto);
 router.post('/search', productsController.search);
-router.get('/delete', productsController.delete);
+router.post('/delete', productsController.delete);
+router.get('/editar/:id',productsController.editar)
+
+router.put('/editar/:id', productsController.guardarEdicion);
 
 module.exports = router;
