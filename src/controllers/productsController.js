@@ -123,6 +123,47 @@ module.exports = {
     },
 
     delete: function (req,res){
-        
-    }
-}
+        db.product.destroy({
+            where:{
+                id:req.params.id
+            },
+        })
+        .then(result => {
+            console.log(result)
+            res.redirect('/products')
+
+        })
+    },
+
+    editar: function(req,res){
+        db.Productos.findOne({ 
+            where:{ id_producto:req. params.id } }) 
+            .then(elemento => { res.render("EditarProducto",{ 
+                producto: elemento, 
+                title : "Modificar producto", 
+                css: "style.css", usuario:req.session.usuario 
+            }) 
+        }) 
+        .catch(error => { 
+            res.send(error) 
+        }) 
+    },
+    guardarEdicion: function(req,res){
+        db.Producto.update({ 
+            nombre: req.body.nombre, 
+            precio: req.body.precio, 
+            id_categoria: req.body.categoria, 
+            descripcion: req.body.descripcion, 
+            fotos: (req.files[0])?req.files[0].
+            filename : productos.imagen, 
+        },
+        { where: { 
+            id: req.params.id 
+        } 
+        })
+            .then(resultado => { 
+                res.redirect('/products') 
+            }) 
+    
+
+    }}
