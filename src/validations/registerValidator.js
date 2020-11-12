@@ -1,11 +1,10 @@
-let usuarios = require('../data/usuarios');
 
 let db = require('../database/models')
 
 const {check,validationResult,body} = require('express-validator');
 
 module.exports = [
-    check('name')
+    check('nombre')
     .isLength({
         min:1
     })
@@ -19,7 +18,7 @@ module.exports = [
 
     body('email')
     .custom(function(value){
-        return db.user.findOne({
+        return db.User.findOne({
             where:{
                 email:value
             }
@@ -37,12 +36,11 @@ module.exports = [
 
     check('password')
     .isLength({
-        min:6,
-        max:12
+        min:1,
     })
-    .withMessage("Debes ingresar una contraseña entre 6 y 12 caracteres"),
+    .withMessage("Debes ingresar una contraseña"),
 
-    check('bases')
+    check('terminos')
     .isString("on")
     .withMessage("Debe aceptar las bases y condiciones"),
 
@@ -55,11 +53,5 @@ module.exports = [
         }
     }).withMessage("Solo se permite png, jpg, jpeg, gif")
 
-    .custom(req => {
-        if(!reqfiles[0]){
-            return false
-        }else{
-            return true
-        }
-    }).withMessage("Tenés que subir una imagen")
+   
 ]
