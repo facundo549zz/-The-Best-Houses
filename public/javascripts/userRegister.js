@@ -107,16 +107,25 @@ window.addEventListener('load',function(){
 
     inputAvatar.addEventListener('change',function(e){
 
-        let reader = new FileReader();
+        console.log(!e.target.files[0].name.match(/\.(jpg|jpeg|png|gif)$/))
 
-        reader.readAsDataURL(e.target.files[0]);
+        if (!e.target.files[0].name.match(/\.(jpg|jpeg|png|gif)$/)){
+            errorAvatar.innerHTML = "file inválido"
+            this.classList.add('is-invalid')
+        }else{
 
-        reader.onload = function(){
-                vistaPrevia.src = reader.result;
-                inputAvatar.classList.remove('is-invalid')
-                inputAvatar.classList.add('is-valid');
-                errorAvatar.innerHTML = ""
-        }      
+            let reader = new FileReader();
+
+            reader.readAsDataURL(e.target.files[0]);
+
+            reader.onload = function(){
+                    vistaPrevia.src = reader.result;
+                    inputAvatar.classList.remove('is-invalid')
+                    inputAvatar.classList.add('is-valid');
+                    errorAvatar.innerHTML = ""
+            }  
+        }  
+
     })
 
     checkBases.addEventListener('click',function(){
