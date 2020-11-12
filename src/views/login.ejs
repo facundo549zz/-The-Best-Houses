@@ -12,7 +12,7 @@
     <div class="divvv">
       
         <img src="/images/logo.jpeg" alt="" />
-        <form action="" method="POST">
+        <form action="" method="POST" id="login">
         <div class="form-row">
           <div class="mt-2 col-md-6 mb-3">
             <label for="email">Email</label>
@@ -25,7 +25,7 @@
               value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>"
               name="email"
             />
-            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
+            <small id="errorEmail" class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
 
           </div>
           <div class="mt-2 col-md-6 mb-3">
@@ -38,7 +38,7 @@
               name="password"
               id="password"
             />
-            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.password)?errors.password.msg: "" %> </small>
+            <small id="errorPass" class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
           </div>
         </div>
 
@@ -57,5 +57,6 @@
         </div>
          
   <%- include('partials/footer') %>
+  <script src="/javascripts/userLogin.js"></script>
 </body>
 </html>

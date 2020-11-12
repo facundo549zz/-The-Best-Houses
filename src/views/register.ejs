@@ -3,23 +3,12 @@
 
   <%- include('partials/head') %> 
   
-  <script src="/javascripts/userRegister.js"></script>
-  <script>
-    function myFunction() {
-      var x = document.getElementById("inputPassword3");
-      if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
-      }
-    }
-  </script>
   <body>
     <%- include('partials/header') %>
     <h1 class="regis ml-3"><%= title %></h1>
     <div class="divvv">
       <img src="/images/logo.jpeg" alt="" />
-      <form method="POST" action="" enctype="multipart/form-data">
+      <form method="POST" action="" enctype="multipart/form-data" id="register">
         <div class="form-row">
           <div class="mt-2 col-md-6 mb-3">
             <label for="Nombre">Nombre</label>
@@ -96,7 +85,7 @@
           <div class="mt-2 col-sm-offset-2 col-sm-10">
             <div class="checkbox">
               <label>
-                <input type="checkbox" id="terminos"/> Acepto los
+                <input type="checkbox" id="terminos" required/> Acepto los
                 <a href=""> Términos y condiciones </a> y las
                 <a href=""> Políticas de privacidad </a> de The Best Bikes
                 <small id="errorBases" class="text-danger"><%= (typeof errors != 'undefined' && errors.bases)?errors.bases.msg: "" %> </small>
@@ -116,5 +105,6 @@
       </form>
     </div>
     <%- include('partials/footer') %>
+    <script src="/javascripts/userRegister.js"></script>
   </body>
 </html>
