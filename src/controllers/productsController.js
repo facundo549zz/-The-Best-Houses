@@ -106,12 +106,16 @@ module.exports = {
             res.send(err)
             })
         }else{
-            res.render('productAdd', {
+            db.Categorie.findAll()
+        .then(categorias=>{
+            res.render('productAdd',{
                 title: "Agregar Producto",
-                css:'productAdd.css',
+                categorias: categorias,
+                css: "productAdd.css",
                 errores: errores.mapped(),
                 old:req.body,
-            }) 
+            })
+        })
             .catch(err => {
                 res.send(err)
             })
