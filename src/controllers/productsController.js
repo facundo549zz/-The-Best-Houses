@@ -23,21 +23,23 @@ module.exports = {
        db.Product.findByPk(id,{ 
             include : [
                 {
-                    asociation : 'categoria'
+                    association : 'categoria'
                 },
             ]
         })
         .then(bicicleta =>{
-            db.product.findAll({
+            producto = bicicleta
+            db.Product.findAll({
                 where:{
-                    id_categoria: bicicleta.categoria.id 
+                    id_categoria: bicicleta
                 }
             })
         })
-        .then(bicicletas =>{  
-        res.render('productDetail', {
+
+            .then(bicicletas =>{  
+            res.render('productDetail', {
             title: "Detalle del Producto",
-            producto: bicicleta.categoria,
+            producto: producto,
             bicicletas: bicicletas,
             css:"productDetail.css",
         })

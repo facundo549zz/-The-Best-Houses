@@ -28,7 +28,8 @@
       </h3>
     </div>
     <div class="container cargaProducto">
-      <div class="datobici">
+      <div class="row">
+      <div class="col-12 col-md-9 datobici">
         <div class="row">
           <input
             type="text"
@@ -105,20 +106,16 @@
           <button type="button" class="btn btn-success">Cargar Producto</button>
         </div>
       </div>
-      <div class="cargafoto">
-        <div class="custom-file">
-          <input
-            type="file"
-            class="custom-file-input"
-            id="customFileLang"
-            lang="es"
-          />
-          <label class="custom-file-label" for="customFileLang"
-            >Seleccionar Archivo</label
-          >
+      
+        <div class="col-12 col-md-3 mt-3 d-flex flex-column align-items-right">            
+        <img src="/images/users/<%= usuario.imagen %> " class="avatarImg" alt="avatar"width="75%" style="object-fit: cover; object-position: top;">
+        <div class="form-group w-75">
+        <input type="file" class="form-control imgProfile" id="imagenImput" name="imagen">
         </div>
-      </div>
-      <div class="fichaTecnica">
+        </div>
+    
+    
+        <div class="fichaTecnica" >
         <h5>Ficha Tecnica</h5>
         <textarea
           name="fichaTecnica"
@@ -126,9 +123,11 @@
           cols="30"
           rows="10"
         ></textarea>
-      </div>
+        </div>
     </div>
-
+    </div>
+ 
+   
     <%- include('partials/footer') %>
   </body>
 </html>

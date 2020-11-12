@@ -4,23 +4,41 @@
   <body>
     <%- include('partials/header') %>
     
-    <h2 class="ml-3"><%= title %>:</h2>
-    <div class="container-fluid">
+    <h2 class="ml-3"><%= title %>:</h2> 
+    <% productos.forEach(producto =>{ %>
+    <div class="container">
       <div class="row">
-        <div class="col-6 col-md-3 todosLosProductos">
+
+        <div class="col-12">
+        <div class="col-6 col-md-3 col-lg-3 todosLosProductos " style="justify-content: space-around;">
           <section>
-            <% productos.forEach(producto =>{ %>
-            <div class="prd ml-2">
-              <%= producto.marca %> <%= producto.nombre %> <br />
-              $<%= producto.precio %>
-              <a href="/products/<%= producto.id %>">
-              <img src="../../public/images/bici/<%= producto.fotos %>" alt=""/></a>
-            </div>
-            <% }) %>
+           
+           <div class="card-deck">
+              <div class="card" style="width: 18rem; ">
+                <a href="/products/<%= producto.id %>"><img src="/images/bici/<%= producto.fotos %>" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title"><%= producto.nombre %> </h5>
+                  <p class="card-text"><%= producto.descripcion %></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Marca :  <%= producto.marca %></li>
+                  <li class="list-group-item">color :  <%= producto.color %></li>
+                  <li class="list-group-item"> $<%= producto.precio %></li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Comprar link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div> 
+
+           
           </section>
         </div>
       </div>
-    </div>
+      </div>
+    </div> 
+    <% }) %>
     <%- include('partials/footer') %>
   </body>
 </html>

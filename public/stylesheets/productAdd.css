@@ -41,6 +41,7 @@ span {
 
 .fichaTecnica {
     margin-top: 20px;
+    
 }
 
 .inPrecio {
@@ -58,6 +59,10 @@ span {
 @media(min-width: 1024px) {
     .inPrecio {
         width: 184px;
+    }
+    .fichaTecnica {
+        margin-top: 20px;
+        margin-bottom: 80px;   
     }
 }
 

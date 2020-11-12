@@ -10,7 +10,24 @@
   <div class="productDetalle">
     <div class="row">
     <div class="detalle col-11 col-lg-4">
-      <h3 class="gravelTitulo" ><%= producto.marca %> <%= producto.nombre %> </h3>
+
+      <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success"><%=producto.categoria.nombre%></div>
+        <div class="card-body text-success">
+          <h5 class="card-title"><%=producto.nombre %></h5>
+          <p class="card-text"><%= producto.color %> <%= producto.precio %></p>
+          <h5>Medios de pago:
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+          </h5>
+          <h5>Efectivo en nuestras sucursales</h5>
+          <a href="/products/cart"><button class="comprar">Agregar al carrito</button></a>
+        </div>
+        <div class="card-footer bg-transparent border-success">Footer</div>
+      </div>
+
+      <!--<h3 class="gravelTitulo" ><%= producto.marca %> <%= producto.nombre %> </h3>
       <h5><%= producto.color %>:</h5>
       <div class="colores">
         <p>Blanco<input type="checkbox" value=""></p>
@@ -24,7 +41,7 @@
         <i class="fab fa-cc-amex"></i>
       </h5>
       <h5>Efectivo en nuestras sucursales</h5>
-      <a href="/products/cart"><button class="comprar">Agregar al carrito</button></a>
+      <a href="/products/cart"><button class="comprar">Agregar al carrito</button></a> -->
 
     </div>
 
