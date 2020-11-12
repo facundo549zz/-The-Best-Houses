@@ -1,7 +1,7 @@
 @import "style.css";
 
 .detalle{
-    background-color: rgb(111, 121, 207);
+  
     height: 250px;
     margin: 10px;
     margin-left: 20px;
@@ -27,13 +27,13 @@
     height: 200px;
     display: inline-block;
     margin-left: 30px;
+    margin-top: 90px;
+    margin-bottom: 20px
 }
 
 .text{
-    background-color: rgb(111, 121, 207);
-    height: 1380px;
     margin: 5px;
-    margin-left: 25px;
+    margin-left: 5px;
     top: 5px;
 }
 .cardB{
@@ -52,9 +52,10 @@
         margin-left: 40px;
     }
     .text {
-        display: inline-block;
+        display: flex;
+        flex-wrap: wrap;
         margin-left: 25px;
-        height: 970px;
+        height: 0%;
     }
     .imgProducto img{
         margin-left: 215px;
@@ -92,8 +93,10 @@
     }
     
     .text{
-        display: inline;
+        display: flex;
+        flex-wrap: wrap;
         margin-left: 50px;
+        height: 0%;
     }
     .cardB{
         display: inline-block;

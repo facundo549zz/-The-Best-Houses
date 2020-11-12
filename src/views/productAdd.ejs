@@ -28,11 +28,14 @@
       </h3>
     </div>
     <div class="container cargaProducto">
-      <div class="datobici">
+      <form action="/products/add" method="POST" enctype="multipart/form-data" id="agregarProducto" class="">
+      <div class="row">
+      <div class="col-12 col-md-9 datobici">
         <div class="row">
           <input
             type="text"
             id="nombreProducto"
+            name="nombre"
             placeholder="Nombre del Producto"
           />
         </div>
@@ -41,13 +44,16 @@
             <span>Tipo</span>
           </div>
           <div class="col-6">
-            <select class="custom-select" name="Tipo" id="Tipo">
-              <option value="">BMX</option>
-              <option value="">Montaña</option>
-              <option value="">Ruta</option>
-              <option value="">Infantil</option>
-              <option value="">Urbana</option>
+            <select name="categoria" id="categoria" class="form-control <%= (typeof old != 'undefined' && old.categoria)?"is-valid":(typeof errors != 'undefined' && errors.categoria)?"is-invalid": ""  %>">
+              <option value="">Eligí la categoría</option>
+              <% if (typeof oldCategoria != 'undefined') { %>
+                  <option value="<%= old.categoria.id %> " selected><%= old.categoria.nombre %> </option>
+              <% } %>
+              <% categorias.forEach(categoria => { %>
+                  <option value="<%= categoria.id %>"><%= categoria.nombre %> </option>
+              <% }) %>>
             </select>
+
           </div>
         </div>
         <div class="row mt-2">
@@ -55,7 +61,7 @@
             <span>Marca</span>
           </div>
           <div class="col-6">
-            <select class="custom-select" name="Marcas" id="Marcas">
+            <select class="custom-select" name="marca" id="marca">
               <option value="">Venzo</option>
               <option value="">Specialized</option>
               <option value="">Olmo</option>
@@ -64,20 +70,20 @@
             </select>
           </div>
         </div>
-        <div class="row mt-2">
+        <!-- <div class="row mt-2">
           <div class="col-6">
             <span>Modelo</span>
           </div>
           <div class="col-6">
-            <input type="text" class="inPrecio">
+            <input type="text" class="inPrecio" name="modelo">
           </div>
-        </div>
+        </div> -->
         <div class="row mt-2">
           <div class="col-6">
             <span>Color</span>
           </div>
           <div class="col-6">
-            <select class="custom-select" name="Colores" id="Colores">
+            <select class="custom-select" name="color" id="color">
               <option value="">Negro</option>
               <option value="">Gris</option>
               <option value="">Blanco</option>
@@ -97,7 +103,7 @@
             <span>Precio</span>
           </div>
           <div class="col-6">
-            <input type="number" class="inPrecio">
+            <input type="number" class="inPrecio" name="precio">
           </div>
         </div>
        
@@ -105,30 +111,29 @@
           <button type="button" class="btn btn-success">Cargar Producto</button>
         </div>
       </div>
-      <div class="cargafoto">
-        <div class="custom-file">
-          <input
-            type="file"
-            class="custom-file-input"
-            id="customFileLang"
-            lang="es"
-          />
-          <label class="custom-file-label" for="customFileLang"
-            >Seleccionar Archivo</label
-          >
+      
+        <div class="col-12 col-md-3 mt-3 d-flex flex-column align-items-right">            
+        <img src="/images/users/<%= usuario.imagen %> " class="avatarImg" alt="avatar"width="75%" style="object-fit: cover; object-position: top;">
+        <div class="form-group w-75">
+        <input type="file" class="form-control imgProfile" id="fotos" name="fotos">
         </div>
-      </div>
-      <div class="fichaTecnica">
+        </div>
+    
+    
+        <div class="fichaTecnica" >
         <h5>Ficha Tecnica</h5>
         <textarea
-          name="fichaTecnica"
-          id="fichaTecnica"
+          name="descripcion"
+          id="descripcion"
           cols="30"
           rows="10"
         ></textarea>
-      </div>
+        </div>
+      </form>
     </div>
-
+    </div>
+ 
+   
     <%- include('partials/footer') %>
   </body>
 </html>
