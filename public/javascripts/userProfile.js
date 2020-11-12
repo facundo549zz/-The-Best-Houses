@@ -14,6 +14,7 @@ window.addEventListener('load',function(){
     let inputNombre = qs('#nombre');
     let inputApellido = qs('#apellido');
     let inputEmail = qs('#email');
+    let inputImage = qs('#imagenImput')
 
     let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
@@ -70,6 +71,29 @@ window.addEventListener('load',function(){
                 errorEmail.innerHTML = ""
                 break;
         }
+    })
+
+    inputImage.addEventListener('change',function(e){
+
+        console.log(!e.target.files[0].name.match(/\.(jpg|jpeg|png|gif)$/))
+
+        if (!e.target.files[0].name.match(/\.(jpg|jpeg|png|gif)$/)){
+            errorAvatar.innerHTML = "file inválido"
+            this.classList.add('is-invalid')
+        }else{
+
+            let reader = new FileReader();
+
+            reader.readAsDataURL(e.target.files[0]);
+
+            reader.onload = function(){
+                    avatar.src = reader.result;
+                    inputImage.classList.remove('is-invalid')
+                    inputImage.classList.add('is-valid');
+                    errorAvatar.innerHTML = ""
+            }  
+        }  
+
     })
 
         let error = false
