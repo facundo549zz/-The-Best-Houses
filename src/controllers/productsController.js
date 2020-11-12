@@ -28,7 +28,7 @@ module.exports = {
             ]
         })
         .then(bicicleta =>{
-            producto = bicicleta
+             producto = bicicleta
             db.Product.findAll({
                 where:{
                     id_categoria: bicicleta
@@ -43,6 +43,7 @@ module.exports = {
             bicicletas: bicicletas,
             css:"productDetail.css",
         })
+
         })
     },
     
