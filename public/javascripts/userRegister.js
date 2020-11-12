@@ -18,7 +18,7 @@ window.addEventListener('load',function(){
     let inputFecha = qs('#fechaDeNacimiento')
     let inputAvatar = qs('#customFileLang');
     let checkBases = qs('#terminos');
-    let checkBases1 = qs('#ofertas');
+    
 
     let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
@@ -134,11 +134,7 @@ window.addEventListener('load',function(){
             errorBases.innerHTML = ""
     })
 
-    checkBases1.addEventListener('click',function(){
-        checkBases1.classList.toggle('is-valid');
-        checkBases1.classList.remove('is-invalid');
-        errorBases1.innerHTML = ""
-    })
+   
 
     formRegister.addEventListener('submit',function(event){
         event.preventDefault();
@@ -147,7 +143,7 @@ window.addEventListener('load',function(){
             errorBases.innerHTML = "Debes aceptar las bases y condiciones"
         }
         let error = false
-        for (let index = 0; index < elementos.length-1; index++) {
+        for (let index = 0; index < elementos.length-2; index++) {
             if(elementos[index].value == 0){
                 elementos[index].classList.add('is-invalid');
                error = true;

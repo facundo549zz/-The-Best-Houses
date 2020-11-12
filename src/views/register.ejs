@@ -1,112 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-
-  <%- include('partials/head') %> 
-  
-  <body>
-    <%- include('partials/header') %>
-    <h1 class="regis ml-3"><%= title %></h1>
-    <div class="divvv">
-      <img src="/images/logo.jpeg" alt="" />
-      <form method="POST" action="" enctype="multipart/form-data" id="register">
-        <div class="form-row">
-          <div class="mt-2 col-md-6 mb-3">
-            <label for="Nombre">Nombre</label>
-            <input
-              placeholder="Nombre"
-              type="text"
-              class="form-control"
-              id="nombre"
-              name="nombre"
-              value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>" 
-            />
-            <small id="errorNombre" class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %> </small>
-          </div>
-          <div class="mt-2 col-md-6 mb-3">
-            <label for="Apellido">Apellido</label>
-            <input
-              placeholder="Apellido"
-              type="text"
-              class="form-control"
-              id="apellido"
-              name="apellido"
-              value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>" 
-            />
-            <small id="errorApellido" class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
-          </div>
-
-          <div class="mt-2 col-md-6 mb-3">
-            <label for="email">Email</label>
-            <input
-              placeholder="email"
-              type="email"
-              class="form-control"
-              id="email"
-              required
-              name="email"
-              value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>"
-            />
-            <small id="errorEmail" class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
-          </div>
-          <div class="mt-2 col-md-6 mb-3">
-            <label for="password">Contraseña</label>
-            <input
-              placeholder="Contraseña"
-              type="password"
-              class="form-control"
-              name="password"
-              id="password"
-            />
-            <small id="errorPass" class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
-        </div>
-       
-          <div class="mt-2 col-md-6 mb-3">
-            <label for="fecha">Fecha de Nacimiento (Opcional)</label>
-            <input
-              placeholder="Fecha de Nacimiento"
-              type="date"
-              class="form-control"
-              name="fechaDeNacimiento"
-              id="fechaDeNacimiento"
-            />
-            <small id="errorFecha" class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
-
-          </div>
-              <div class="mt-2 col-md-6 mb-3">
-              <div class="custom-file avatar">
-              <label class="custom-file-label" for="customFileLang">Imagen de perfil</label>
-              <input placeholder="Seleccionar Archivo" type="file" class="form-control" id="customFileLang" lang="es" name="image" multiple/>
-              <small id="errorAvatar" class="text-danger"><%= (typeof errors != 'undefined' && errors.avatar)?errors.avatar.msg: "" %> </small>
-              </div>
-              </div>
-        </div>
-
-        <div class="form-group">
-          <div class="mt-2 col-sm-offset-2 col-sm-10">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" id="terminos" required/> Acepto los
-                <a href=""> Términos y condiciones </a> y las
-                <a href=""> Políticas de privacidad </a> de The Best Bikes
-                <small id="errorBases" class="text-danger"><%= (typeof errors != 'undefined' && errors.bases)?errors.bases.msg: "" %> </small>
-                <br />
-                <input type="checkbox" id="ofertas"/> Deseo recibir
-                <strong> Ofertas </strong> de esta pagina
-                <small id="errorBases1" class="text-danger"><%= (typeof errors != 'undefined' && errors.bases)?errors.bases.msg: "" %> </small>
-              </label>
+<%- include('partials/head') %>
+    <body>
+        <%- include('partials/header') %>
+            <h1 class="regis ml-3">
+                <%= title %>
+            </h1>
+            <div class="divvv">
+                <img src="/images/logo.jpeg" alt="" />
+                <form method="POST" action="" enctype="multipart/form-data" id="register">
+                    <div class="form-row">
+                        <div class="mt-2 col-md-6 mb-3">
+                            <label for="Nombre">Nombre</label>
+                            <input placeholder="Nombre" type="text" class="form-control" id="nombre" name="nombre" value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>" />
+                            <small id="errorNombre" class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %> </small>
+                        </div>
+                        <div class="mt-2 col-md-6 mb-3">
+                            <label for="Apellido">Apellido</label>
+                            <input placeholder="Apellido" type="text" class="form-control" id="apellido" name="apellido" value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>" />
+                            <small id="errorApellido" class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
+                        </div>
+                        <div class="mt-2 col-md-6 mb-3">
+                            <label for="email">Email</label>
+                            <input placeholder="email" type="email" class="form-control" id="email" name="email" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" />
+                            <small id="errorEmail" class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
+                        </div>
+                        <div class="mt-2 col-md-6 mb-3">
+                            <label for="password">Contraseña</label>
+                            <input placeholder="Contraseña" type="password" class="form-control" name="password" id="password" />
+                            <small id="errorPass" class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
+                        </div>
+                        <div class="mt-2 col-md-6 mb-3">
+                            <label for="fecha">Fecha de Nacimiento (Opcional)</label>
+                            <input placeholder="Fecha de Nacimiento" type="date" class="form-control" name="fechaDeNacimiento" id="fechaDeNacimiento" />
+                            <small id="errorFecha" class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
+                        </div>
+                        <div class="mt-2 col-md-6 mb-3">
+                            <div class="custom-file avatar">
+                                <label class="custom-file-label" for="customFileLang">Imagen de perfil</label>
+                                <input placeholder="Seleccionar Archivo" type="file" class="form-control" id="customFileLang" lang="es" name="image" multiple/>
+                                <small id="errorAvatar" class="text-danger"><%= (typeof errors != 'undefined' && errors.avatar)?errors.avatar.msg: "" %> </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="mt-2 col-md-6 mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="terminos">
+                                <label class="form-check-label" for="">
+                                  Acepto los <a href=""> Términos y condiciones </a> y las
+                                  <a href=""> Políticas de privacidad </a> de The Best Bikes    
+                            </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="ofertas">
+                                <label class="form-check-label" for="">
+                                  Deseo recibir<strong> Ofertas </strong> de esta pagina
+                              </label>
+                            </div>
+                        </div>
+                        <div class="mt-2 col-md-6 mb-3">
+                            <span id="errorBases" class="text-danger"><%= (typeof errors != 'undefined' && errors.bases)?errors.bases.msg: "" %></span>
+                            <br>
+                            <span id="msgError" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="mt-2 col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Registrar</button>
+                        </div>
+                    </div>
+                </form>
+                <img src="" alt="" id="vistaPrevia">
             </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="mt-2 col-sm-offset-2 col-sm-10">
-            <span id="msgError" class="text-danger"></span>
-            <button type="submit" class="btn btn-default">Registrar</button>
-          </div>
-        </div>
-      </form>
-      <img src="" alt="" id="vistaPrevia">
-    </div>
-    <%- include('partials/footer') %>
-    <script src="/javascripts/userRegister.js"></script>
-  </body>
+            <%- include('partials/footer') %>
+                <script src="/javascripts/userRegister.js"></script>
+    </body>
 </html>

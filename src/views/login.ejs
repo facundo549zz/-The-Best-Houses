@@ -25,7 +25,7 @@
               value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>"
               name="email"
             />
-            <small id="errorEmail" class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
+            <small id="errorEmail" class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
 
           </div>
           <div class="mt-2 col-md-6 mb-3">
@@ -38,7 +38,7 @@
               name="password"
               id="password"
             />
-            <small id="errorPass" class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
+            <small id="errorPass" class="text-danger"><%= (typeof errors != 'undefined' && errors.password)?errors.password.msg: "" %> </small>
           </div>
         </div>
 
