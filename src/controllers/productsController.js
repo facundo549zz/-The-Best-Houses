@@ -31,7 +31,7 @@ module.exports = {
              producto = bicicleta
             db.Product.findAll({
                 where:{
-                    id_categoria: bicicleta
+                    id_categoria: bicicleta.categoria.id
                 }
             })
         })
@@ -87,19 +87,34 @@ module.exports = {
          
      },
     upload: function (req, res) {
-        let lastID = productos.length;
-
-        let nuevoProducto = {
-            id: lastID + 1,
-            category: req.body.category,
-            marca: req.body.marcas,
-            name: req.body.name,
-            colors: req.body.colores,
-            price: req.body.price,
-            description: req.body.description,
-            image: req.files[0].filename,
-        };
-        productos.push(nuevoProducto);
-        fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'), JSON.stringify(productos), 'utf-8');
+        let errores = validationResult(req)
+        if(errores.isEmpty()){
+            db.Product.Create({
+                marca: req.body.marca,
+                nombre: req.body.nombre,
+                color: req.body.color,
+                precio: Number(req.body.precio),
+                descripcion: req.body.fichaTecnica,
+                fotos: (req.files[0]) ?req.files[0].filename: "default.png",
+               /* id_categoria:Number(req.body.categoria)*/
+                })
+            .then(result => {
+                console.log(result)
+                res.redirect('/products')
+            })
+            .catch(err => {
+            res.send(err)
+            })
+        }else{
+            res.render('productAdd', {
+                title: "Agregar Producto",
+                css:'productAdd.css',
+                errores: errores.mapped(),
+                old:req.body,
+            }) 
+            .catch(err => {
+                res.send(err)
+            })
+        }
     },
 }
