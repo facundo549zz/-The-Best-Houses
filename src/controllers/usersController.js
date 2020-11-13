@@ -99,13 +99,13 @@ module.exports = {
 
     },
     updateProfile: function (req, res) {
-        if (req.files[0]) {
+      /*   if (req.files[0]) {
             if (fs.existsSync(path.join(__dirname, '../../public/images/users/' + req.session.usuario.imagen))) {
                 fs.unlinkSync(path.join(__dirname, '../../public/images/users/' + req.session.usuario.imagen))
                 res.locals.usuario.imagen = req.files[0].filename
             }
 
-        }
+        } */
         db.User.update(
             {
                 nombre: req.body.nombre,

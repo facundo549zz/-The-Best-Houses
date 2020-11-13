@@ -101,9 +101,6 @@ window.addEventListener('load',function(){
        this.setAttribute("title","La contraseña debe tener entre 6 y 12 caracteres, una mayúscula una minúscula y un número");
     })
 
-    inputFecha.addEventListener('blur', function(){
-
-    })
 
     inputAvatar.addEventListener('change',function(e){
 
@@ -119,6 +116,7 @@ window.addEventListener('load',function(){
             reader.readAsDataURL(e.target.files[0]);
 
             reader.onload = function(){
+                    vistaPrevia.style.display = 'block';
                     vistaPrevia.src = reader.result;
                     inputAvatar.classList.remove('is-invalid')
                     inputAvatar.classList.add('is-valid');
@@ -143,7 +141,7 @@ window.addEventListener('load',function(){
             errorBases.innerHTML = "Debes aceptar las bases y condiciones"
         }
         let error = false
-        for (let index = 0; index < elementos.length-2; index++) {
+        for (let index = 0; index < elementos.length-5; index++) {
             if(elementos[index].value == 0){
                 elementos[index].classList.add('is-invalid');
                error = true;

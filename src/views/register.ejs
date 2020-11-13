@@ -7,7 +7,10 @@
                 <%= title %>
             </h1>
             <div class="divvv">
+                <div class="d-flex justify-content-between">
                 <img src="/images/logo.jpeg" alt="" />
+                <img src="" id="vistaPrevia" style="display: none;">
+            </div>
                 <form method="POST" action="" enctype="multipart/form-data" id="register">
                     <div class="form-row">
                         <div class="mt-2 col-md-6 mb-3">
@@ -38,7 +41,7 @@
                         <div class="mt-2 col-md-6 mb-3">
                             <div class="custom-file avatar">
                                 <label class="custom-file-label" for="customFileLang">Imagen de perfil</label>
-                                <input placeholder="Seleccionar Archivo" type="file" class="form-control" id="customFileLang" lang="es" name="image" multiple/>
+                                <input placeholder="Seleccionar Archivo" type="file" class="form-control" id="customFileLang" lang="es" name="image"/>
                                 <small id="errorAvatar" class="text-danger"><%= (typeof errors != 'undefined' && errors.avatar)?errors.avatar.msg: "" %> </small>
                             </div>
                         </div>
@@ -71,9 +74,8 @@
                         </div>
                     </div>
                 </form>
-                <img src="" alt="" id="vistaPrevia">
             </div>
             <%- include('partials/footer') %>
-                <!--<script src="/javascripts/userRegister.js"></script>-->
+         <script src="/javascripts/userRegister.js"></script>
     </body>
 </html>
