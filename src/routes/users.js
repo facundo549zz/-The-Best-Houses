@@ -14,7 +14,6 @@ router.post('/register',upImageAvatar.any(),registerValidator,usersController.pr
 router.get('/login', usersController.login);
 router.post('/login', loginValidator, usersController.processLogin);
 router.get('/profile',sessionUserCheck,usersController.profile);
-router.post('/profile',upImageAvatar.any(),usersController.profile);
 router.put('/updateProfile/:id',upImageAvatar.any(),usersController.updateProfile);
 router.get('/logout',usersController.logout);
 router.delete('/delete/:id',usersController.delete);

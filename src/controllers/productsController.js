@@ -87,16 +87,13 @@ module.exports = {
          
      },
     upload: function (req, res) {
-        let errores = validationResult(req)
-        if(errores.isEmpty()){
-            db.Product.Create({
-                marca: req.body.marca,
-                nombre: req.body.nombre,
-                color: req.body.color,
+            db.Product.create({
+                marca: req.body.marca.trim(),
+                nombre: req.body.nombre.trim(),
                 precio: Number(req.body.precio),
                 descripcion: req.body.fichaTecnica,
                 fotos: (req.files[0]) ?req.files[0].filename: "default.png",
-               /* id_categoria:Number(req.body.categoria)*/
+                id_categoria:Number(req.body.categoria)
                 })
             .then(result => {
                 console.log(result)
@@ -105,21 +102,6 @@ module.exports = {
             .catch(err => {
             res.send(err)
             })
-        }else{
-            db.Categorie.findAll()
-        .then(categorias=>{
-            res.render('productAdd',{
-                title: "Agregar Producto",
-                categorias: categorias,
-                css: "productAdd.css",
-                errores: errores.mapped(),
-                old:req.body,
-            })
-        })
-            .catch(err => {
-                res.send(err)
-            })
-        }
     },
 
     delete: function (req,res){

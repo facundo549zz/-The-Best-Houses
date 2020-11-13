@@ -108,9 +108,9 @@ module.exports = {
         } */
         db.User.update(
             {
-                nombre: req.body.nombre,
-                apellido: req.body.apellido,
-                fecha_de_nacimiento: req.body.fechaDeNacimiento,
+                nombre: req.body.nombre.trim(),
+                apellido: req.body.apellido.trim(),
+                fecha_de_nacimiento: req.body.fechaDeNacimiento ? req.body.fechaDeNacimiento : null,
                 imagen: (req.files[0]) ? req.files[0].filename : req.session.usuario.imagen,
                 domicilio: req.body.domicilio.trim(),
             },
@@ -121,7 +121,7 @@ module.exports = {
             }
         )
             .then(result => {
-                console.log(req.session.usuario)
+                console.log(result)
 
                 return res.redirect('/users/profile')
             })

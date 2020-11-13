@@ -14,8 +14,6 @@ window.addEventListener('load',function(){
 
     let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
-    let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
-
     inputEmail.addEventListener('blur',function(){
 
         switch (true) {
@@ -41,10 +39,6 @@ window.addEventListener('load',function(){
                 errorPass.innerHTML = "El campo contraseña es obligatorio"
                 this.classList.add('is-invalid')
                 break;
-            case !regExPass.test(this.value):
-                errorPass.innerHTML = "La contraseña debe tener entre 6 y 12 caracteres, una mayúscula una minúscula y un número"
-                this.classList.add('is-invalid')
-                break
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
@@ -53,20 +47,4 @@ window.addEventListener('load',function(){
         }
     })
 
-    inputPass.addEventListener('mouseover',function(){
-       this.setAttribute("title","La contraseña debe tener entre 6 y 12 caracteres, una mayúscula una minúscula y un número");
-
-       let error = false
-        for (let index = 0; index < elementos.length-1; index++) {
-            if(elementos[index].value == 0){
-                elementos[index].classList.add('is-invalid');
-               error = true;
-            }
-        }
-        if(!error){
-            formLogin.submit()
-        }else{
-            msgError.innerHTML = "Los campos señadados son obligatorios"
-        }
-    })
 })

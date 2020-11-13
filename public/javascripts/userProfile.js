@@ -96,8 +96,10 @@ window.addEventListener('load',function(){
 
     })
 
-        let error = false
-        for (let index = 0; index < elementos.length-1; index++) {
+        formProfile.addEventListener('submit' , (e)=>{
+            e.preventDefault()
+             let error = false
+        for (let index = 1; index < elementos.length-4; index++) {
             if(elementos[index].value == 0){
                 elementos[index].classList.add('is-invalid');
                error = true;
@@ -108,4 +110,6 @@ window.addEventListener('load',function(){
         }else{
             msgError.innerHTML = "Los campos señadados son obligatorios"
         }
+        })
+       
 })
